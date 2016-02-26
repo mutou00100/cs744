@@ -44,13 +44,9 @@
 					<%if (request.getSession().getAttribute("firstname") == "admin"){%>
 					<% out.print("<li><a href=\"addUser.jsp\">Add a User</a></li>");%>
 					<% out.print("<li><a href=\"listUser.action\">Check Users</a></li>");}%>
-					<li class="dropdown-submenu">
-    					<a tabindex="-1" href="#">Add Node</a>
-    					<ul class="dropdown-menu">
-      						<li><s:a href="addNode.jsp">Add Non-Connector Node</s:a></li>
-							<li class="active"><s:a href="addConnector.jsp">Add Pattern</s:a></li>
-    					</ul>
-  					</li>
+      				<li><s:a href="addNode.jsp">Add Non-Connector Node</s:a></li>
+					<li class="active"><s:a href="addConnector.jsp">Add Pattern</s:a></li>
+    					
   					<li><s:a href="deleteNode.jsp">Delete Node</s:a></li>
 				</ul>
 			</div>
