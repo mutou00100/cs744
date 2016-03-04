@@ -13,6 +13,17 @@ public class Edge {
 	public void setNode1(int node1) {
 		this.nID1 = node1;
 	}
+	@Override
+	public int hashCode() {
+		return nID1*nID2;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		Edge other = (Edge) obj;
+		if ((nID1 == other.nID1 && nID2 == other.nID2) || (nID1 == other.nID2 && nID2 == other.nID1))
+			return true;
+		return false;
+	}
 	public int getNode2() {
 		return nID2;
 	}

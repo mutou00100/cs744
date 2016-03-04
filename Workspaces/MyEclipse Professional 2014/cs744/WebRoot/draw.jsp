@@ -30,7 +30,7 @@ if (request.getAttribute("error") == null) {
     var edges = null;
     var network = null;
     var DIR = '<%=path%>/img/';
-	var EDGE_LENGTH_MAIN = 300;
+	var EDGE_LENGTH_MAIN = 400;
 	var EDGE_LENGTH_SUB = 80;
 
 	function draw() {
@@ -55,7 +55,7 @@ if (request.getAttribute("error") == null) {
   			for (int i=0;i<edgeCC.size();i++){
   			%>
   			
-			edges.push({from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth:false,length : EDGE_LENGTH_MAIN,dashes:true});
+			edges.push({from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
 			<%}
 			for (int i=0;i<edgeCN.size();i++){
   			%>			

@@ -103,6 +103,23 @@ public class NodeDao {
 		}
 		return false;
 	}
+	public boolean whetherConnectedToPattern(int nid) {
+		try {
+			conn = ConnUtils.getConnection();//
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE nID = ? AND flag = ?");
+			pstmt.setInt(1, nid);
+			pstmt.setInt(2, 0);
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return false;
+	}
 	public boolean deleteInNode(int nid){
 		boolean result = false;
 
@@ -161,6 +178,29 @@ public class NodeDao {
 			while (rs.next()){
 				Edge e = new Edge(rs.getInt("nID1"), rs.getInt("nID2"));
 				result.add(e);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return result;
+	}
+	
+	public ArrayList<Integer> searchNeighborNode(int nid) {
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		try {
+			conn = ConnUtils.getConnection();//
+			pstmt = conn.prepareStatement("SELECT * FROM NodeEdge Where nID1 = ? or nID2 = ?");
+			pstmt.setInt(1, nid);
+			pstmt.setInt(2, nid);
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				if (rs.getInt("nID1") == nid){
+					result.add(rs.getInt("nID2"));
+				} else {
+					result.add(rs.getInt("nID1"));
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -551,6 +591,49 @@ public class NodeDao {
 		}
 		return count;
 	}
+	public ArrayList<Integer> getNodeConnectedtoPattern(int cId) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		try {
+			conn = ConnUtils.getConnection();//
+			//rs = pstmt.executeQuery();
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE cID = ? AND flag = ?");
+			pstmt.setInt(1, cId);
+			pstmt.setInt(2, 0);
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				res.add(rs.getInt("nID"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return res;
+	}
+	public Node getNodeById(int nId) {
+		try {
+			conn = ConnUtils.getConnection();//
+			//rs = pstmt.executeQuery();
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE  nID = ?");
+			pstmt.setInt(1, nId);
+			rs = pstmt.executeQuery();					
+			if (rs.next()){
+				//int nID, int status, String type,int group, int flag, int active)
+				Node n = new Node(
+						rs.getInt("nID"),
+						rs.getInt("status"),
+						rs.getString("type"),
+						rs.getInt("cID"),
+						rs.getInt("flag"));
+				return n;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return null;
+	}
 	
 	public boolean edge(int n1, int n2) {
 		try {
@@ -605,5 +688,23 @@ public class NodeDao {
 		}
 		return false;
 	}
+	public ArrayList<Integer> getAllNforPattern(int cid) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		try {
+			conn = ConnUtils.getConnection();//
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE flag = ? AND cid = ?");
+			pstmt.setInt(1, 0);
+			pstmt.setInt(2, cid);
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				res.add(rs.getInt("nID"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return res;
 	}
+}
 	

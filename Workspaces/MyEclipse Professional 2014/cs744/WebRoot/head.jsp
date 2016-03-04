@@ -16,7 +16,8 @@
 <%String path = request.getContextPath(); %>
 
 </head>
-<body onload="draw();">
+<body onload="draw();"> 
+<a target="_blank" class="brand"><h1><center></>Concentric Ring Network</center></h1></a>
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -24,7 +25,6 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a target="_blank" class="brand">Concentric Ring Network</a>
 				<div class="nav-collapse navbar-responsive-collapse collapse">
 					<ul class="nav pull-right">
 						<li><a ><%=request.getSession().getAttribute("firstname")%></a></li>
@@ -45,8 +45,8 @@
 					<% out.print("<li><a href=\"addUser.jsp\">Add a User</a></li>");%>
 					<% out.print("<li><a href=\"listUser.action\">Check Users</a></li>");}%>
       				<li><s:a href="addNode.jsp">Add Non-Connector Node</s:a></li>
-					<li class="active"><s:a href="addConnector.jsp">Add Pattern</s:a></li>
-    					
+					<li><s:a href="addConnector.jsp">Add Pattern</s:a></li>			
   					<li><s:a href="deleteNode.jsp">Delete Node</s:a></li>
+  					<li><s:a href="sendMessage.jsp">Send Message</s:a></li>
 				</ul>
 			</div>
