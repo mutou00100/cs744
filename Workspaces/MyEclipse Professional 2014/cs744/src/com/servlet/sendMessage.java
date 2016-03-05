@@ -42,7 +42,7 @@ public class sendMessage extends HttpServlet {
 				md.addMessage(message, ori, dest);
 			}
 		}
-		request.setAttribute("path", path);
+		request.setAttribute("pathNode", path);
 		ArrayList<Edge> pathEdge = new ArrayList<Edge>();
 		for (int i = 0; i < path.size() - 1; i++) {
 			Edge e = new Edge(path.get(i), path.get(i + 1));
@@ -55,27 +55,6 @@ public class sendMessage extends HttpServlet {
 		System.out.println("");
 		request.getRequestDispatcher("sendMessage.jsp").forward(request, response);	
 	}
-//	boolean helper(HashSet<Integer> hs, int cur, int dest, ArrayList<Integer> fake) {
-//		if (rememberToChange) {
-//			return true;
-//		}
-//		if (cur == dest) {
-//			rememberToChange = true;
-//			return true;
-//		}
-//		ArrayList<Integer> neighbors = nd.searchNeighborNode(cur);
-//		for (int i = 0; i < neighbors.size(); i++) {
-//			int temp = neighbors.get(i);
-//			if (!hs.contains(temp) && nd.getNodeById(temp).getStatus() == 0) {
-//				hs.add(temp);
-//				fake.add(temp);
-//				if (!helper(hs, temp, dest, fake)){
-//					fake.remove(fake.size() - 1);
-//				}
-//			}
-//		}
-//		return rememberToChange;
-//	}
 	boolean helper(HashSet<Integer> hs, int cur, int dest, ArrayList<Integer> fake) {
 		if (rememberToChange) {
 			return true;

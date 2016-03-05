@@ -30,21 +30,21 @@ if (request.getAttribute("error") == null) {
     var edges = null;
     var network = null;
     var DIR = '<%=path%>/img/';
-	var EDGE_LENGTH_MAIN = 400;
-	var EDGE_LENGTH_SUB = 80;
+	var EDGE_LENGTH_MAIN = 500;
+	var EDGE_LENGTH_SUB = 100;
 
 	function draw() {
-		nodes = [];
-		edges = [];
+		nodes = new vis.DataSet();
+		edges = new vis.DataSet();
 <%
   		if(allnodes != null) { 
   			for (int i=0;i<allnodes.size();i++){%>
 	
 				<%if (allnodes.get(i).getType().equals("c")){%>
-				nodes.push({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape : 'image'
+				nodes.add({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape: 'circularImage'
 				});
 				<%}else {%>
-				nodes.push({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'image'});
+				nodes.add({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage'});
 <%}%>
 	
 <%}
@@ -55,15 +55,15 @@ if (request.getAttribute("error") == null) {
   			for (int i=0;i<edgeCC.size();i++){
   			%>
   			
-			edges.push({from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
+			edges.add({from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
 			<%}
 			for (int i=0;i<edgeCN.size();i++){
   			%>			
-			edges.push({from :<%=edgeCN.get(i).getNode1()%>, to :<%=edgeCN.get(i).getNode2()%>,smooth:false,length : EDGE_LENGTH_SUB});
+			edges.add({from :<%=edgeCN.get(i).getNode1()%>, to :<%=edgeCN.get(i).getNode2()%>,smooth:false,length : EDGE_LENGTH_SUB});
 			<%}
 			for (int i=0;i<edgeNN.size();i++){%>
   			
-			edges.push({from :<%=edgeNN.get(i).getNode1()%>, to :<%=edgeNN.get(i).getNode2()%>,smooth: {type: 'dynamic'}});
+			edges.add({from :<%=edgeNN.get(i).getNode1()%>, to :<%=edgeNN.get(i).getNode2()%>,smooth: {type: 'dynamic'}});
 			<%}
   		}%>
 	// create a network
@@ -72,7 +72,16 @@ if (request.getAttribute("error") == null) {
 			nodes : nodes,
 			edges : edges
 		};
-		var options ={layout:{randomSeed:1}};
+		var options ={
+		layout:{randomSeed:1},
+		 nodes: {
+	      color: {
+            background: '#6AAFFF'
+          },
+          shapeProperties: {
+            useBorderWithImage:true
+          }
+        },};
 		network = new vis.Network(container, data, options);
 	}
 </script>

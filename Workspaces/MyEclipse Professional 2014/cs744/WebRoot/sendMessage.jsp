@@ -17,7 +17,7 @@
 		 pathEdge = (ArrayList<Edge>)request.getAttribute("pathEdge");
 	}
 	if (request.getAttribute("pathNode") != null) {
-		pathNode = (ArrayList<Integer>)request.getAttribute("Integer");
+		pathNode = (ArrayList<Integer>)request.getAttribute("pathNode");
 	}
 	HashSet<Edge> hs = new HashSet<Edge>();
 	HashSet<Edge> hs1 = new HashSet<Edge>();
@@ -63,7 +63,6 @@ if (request.getAttribute("error") == null) {
 								<td>message：</td>
 								<td class="input"><input class="input-small" id= "n2" name="message"
 									size="10" type="text" value=""></input></td>
-								<td><a onclick = addx();>show path</a>></td>
 								<td>
 									<button class="btn btn-primary" type="submit">Send</button>
 								</td>
@@ -75,8 +74,8 @@ if (request.getAttribute("error") == null) {
 <script type="text/javascript">
    var nodes, edges, network;
     var DIR = '<%=path%>/img/';
-	var EDGE_LENGTH_MAIN = 400;
-	var EDGE_LENGTH_SUB = 80;
+	var EDGE_LENGTH_MAIN = 500;
+	var EDGE_LENGTH_SUB = 100;
   		
 	function draw() {
 		nodes = new vis.DataSet();
@@ -86,10 +85,10 @@ if (request.getAttribute("error") == null) {
   			for (int i=0;i<allnodes.size();i++){%>
 	
 				<%if (allnodes.get(i).getType().equals("c")){%>
-				nodes.add({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape : 'image'
+				nodes.add({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape : 'circularImage'
 				});
 				<%}else {%>
-				nodes.add({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'image'});
+				nodes.add({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage'});
 <%}%>
 	
 <%}
@@ -98,20 +97,17 @@ if (request.getAttribute("error") == null) {
 		<%
   		if(edge != null) { // 有信息返
   			for (int i=0;i<edgeCC.size();i++){
-  			if (!hs.contains((edgeCC.get(i)))){
   			%>
 			edges.add({from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
 			<%}}
 			for (int i=0;i<edgeCN.size();i++){
-			if( !hs.contains((edgeCN.get(i)))){
   			%>	
 			edges.add({from :<%=edgeCN.get(i).getNode1()%>, to :<%=edgeCN.get(i).getNode2()%>,smooth:false,length : EDGE_LENGTH_SUB});
-			<%}}
-			for (int i=0;i<edgeNN.size();i++){
-			if (!hs.contains((edgeNN.get(i)))){			%>
+			<%}
+			for (int i=0;i<edgeNN.size();i++){	%>
 			edges.add({from :<%=edgeNN.get(i).getNode1()%>, to :<%=edgeNN.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_SUB});
-			<%}}
-  		}%>
+			<%}
+  		%>
 	// create a network
 		var container = document.getElementById('mynetwork');
 		var data = {
@@ -120,31 +116,27 @@ if (request.getAttribute("error") == null) {
 		};
 		var options ={layout:{randomSeed:1}};
 		network = new vis.Network(container, data, options);
+		addx();
 	}
+  		
+  		
 	function addx(){
+	var tt = 1000;
+	var count = 0;
 		<%
-  		if(pathEdge != null) { // 有信息返
-  			for (int i=0;i<pathEdge.size();i++){
-  			if (hs1.contains(pathEdge.get(i))){
-  			%>		
-			setTimeout(edges.add({from :<%=pathEdge.get(i).getNode1()%>, 
-			to :<%=pathEdge.get(i).getNode2()%>,
-			arrows:'to',color:'#FFA807',
-			length : EDGE_LENGTH_MAIN,dashes:true}),2000);
-			<%} else { %>
-			setTimeout(edges.add({from :<%=pathEdge.get(i).getNode1()%>, 
-			to :<%=pathEdge.get(i).getNode2()%>,
-			arrows:'to',color:'#FFA807'}),2000);
-  		<%}}
-  		}%>}
-<% 
-if (pathEdge.size() != 0){
-		hs = new HashSet<Edge>(pathEdge);%>
-	</script><%}
-request.getParameter("path");
-if (allnodes.size() == 0){%>
-   <script>
+  		if(pathNode!= null) { // 有信息返
+  			for (int i=0;i<pathNode.size();i++){
+  			%>	
+  			count++;	
+			setTimeout(function() {
+			nodes.update({id :<%=pathNode.get(i)%>,color: {background: 'red'}});},tt + 1000*count);
+			setTimeout(function() {
+			nodes.update({id :<%=pathNode.get(i)%>,color: {background: '#6AAFFF'}});},tt + 1000*(count+1));
+  		<%}}%>}
+	</script><%
+	if (allnodes.size() == 0){%>
+   		<script>
     alert("Please add a pattern first");
     window.location.href = "addConnector.jsp";</script>
-   <% }
+   <%}
 %>
