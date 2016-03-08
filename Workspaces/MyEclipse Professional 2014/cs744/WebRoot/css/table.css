@@ -3,13 +3,13 @@ body,select {
 }
 #mynetwork {
 	position: relative;
-	width: 800px;
-	height: 600px;
+	width: 1150px;
+	height: 560px;
 	border: 1px solid lightgray;
 }
 
 table.legend_table {
-	font-size: 11px;
+	font-size: 9px;
 	border-width: 1px;
 	border-color: #d3d3d3;
 	border-style: solid;

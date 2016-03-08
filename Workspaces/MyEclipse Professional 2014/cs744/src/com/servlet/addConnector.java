@@ -15,20 +15,42 @@ import com.entity.Node;
 
 public class addConnector extends HttpServlet {
 
-	/**
-	 * The doGet method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to get.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		this.doPost(request, response);
-	}
+		NodeDao nDao = new NodeDao();
+		String checked[] = request.getParameter("checkedC").split(",");
+		nDao.addCNode();
+		int node = nDao.getLast();
+		response.setContentType("text/xml;charset=UTF-8");
+		StringBuffer sb = new StringBuffer(""); 
+		sb.append("<test>");
+		sb.append("<node>");
+		nDao.updateCNode(node);
+		sb.append(""+node);
+		sb.append("</node>");
+		sb.append("<node>");
+		sb.append("<edge>");  
+		if (checked == null || checked.length == 0 ||(checked.length == 1 && checked[0] == "")) {
+			
+		} else {
+			int[] checkedC = new int[checked.length];
+			for (int i = 0; i < checkedC.length; i++) {
+			checkedC[i] = Integer.parseInt(checked[i]);
+			}
+			for (int i = 0; i < checkedC.length;i++){
+				nDao.addEdge(node, checkedC[i]);
+				int eID = nDao.getLastEdge();
+				sb.append("<node0>"+eID+"</node0>");
+				sb.append("<node1>"+node+"</node1>");
+				sb.append("<node2>"+checkedC[i]+"</node2>");
+			}
+		}
+		sb.append("</edge>");  
+		sb.append("</node>");
+		sb.append("</test>");
+		PrintWriter out = response.getWriter() ;
+		out.print(sb);
+		}
 
 	/**
 	 * The doPost method of the servlet. <br>
@@ -42,30 +64,6 @@ public class addConnector extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ArrayList<Edge> res = new ArrayList<Edge>();
-		ArrayList<Node> nodes = new ArrayList<Node>();
-		NodeDao nDao = new NodeDao();
-		String[] checked = request.getParameterValues("checkedC");
-		nDao.addCNode();
-		int node = nDao.getLast();
-		nDao.updateCNode(node);
-		if (checked == null || checked.length == 0) {
-			
-		} else {
-			int[] checkedC = new int[checked.length];
-			for (int i = 0; i < checkedC.length; i++) {
-			checkedC[i] = Integer.parseInt(checked[i]);
-			}
-			for (int i = 0; i < checkedC.length;i++){
-				nDao.addEdge(node, checkedC[i]);
-				}
-			}
-		res.addAll(nDao.getNEdges());
-		res.addAll(nDao.getCEdges());
-		nodes.addAll(nDao.getAllNodes());
-		request.setAttribute("newEdges", res);
-		request.setAttribute("nodes", nodes);
-		request.getRequestDispatcher("addConnector.jsp").forward(request, response);
-	}
+		this.doGet(request, response);
 
-}
+}}

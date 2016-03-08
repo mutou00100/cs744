@@ -3,8 +3,14 @@ package com.entity;
 import java.sql.Date;
 
 public class Message {
-	private Date id;
-	public Date getId() {
+	private String id;
+	public Message(String id, int origin, int dest, String content){
+		this.id = id;
+		this.origin = origin;
+		this.destination = dest;
+		this.content = content;
+	}
+	public String getId() {
 		return id;
 	}
 	public void setId(Date id) {

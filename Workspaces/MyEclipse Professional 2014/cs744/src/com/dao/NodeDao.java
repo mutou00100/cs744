@@ -18,6 +18,40 @@ public class NodeDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	private int ri, row, rc;
+	public void updateNode(int nid,String str){
+		try {
+			conn = ConnUtils.getConnection();
+			String sql = "UPDATE Node set type = ? WHERE nID = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, str);
+			pstmt.setInt(2, nid);
+			row = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+	}
+	public boolean checkstatus(int nid) {
+		try {
+			conn = ConnUtils.getConnection();//
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE nid = ?");
+			pstmt.setInt(1, nid);
+			rs = pstmt.executeQuery();					
+			if (rs.next()){
+				if( rs.getInt("status") == 0){
+					return true;
+				} else {
+					return false;
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return false;
+	}
 	public int whichPattern(int nid) {
 		int result = 0;
 		try {
@@ -176,7 +210,7 @@ public class NodeDao {
 			pstmt.setInt(2, nid);
 			rs = pstmt.executeQuery();					
 			while (rs.next()){
-				Edge e = new Edge(rs.getInt("nID1"), rs.getInt("nID2"));
+				Edge e = new Edge(rs.getInt("eID"),rs.getInt("nID1"), rs.getInt("nID2"));
 				result.add(e);
 			}
 		} catch (SQLException e) {
@@ -234,7 +268,7 @@ public class NodeDao {
 			pstmt = conn.prepareStatement("SELECT * FROM NodeEdge");
 			rs = pstmt.executeQuery();					
 			while (rs.next()){
-				Edge e = new Edge(rs.getInt("nID1"), rs.getInt("nID2"));
+				Edge e = new Edge(rs.getInt("eID"),rs.getInt("nID1"), rs.getInt("nID2"));
 				result.add(e);
 			}
 		} catch (SQLException e) {
@@ -247,16 +281,15 @@ public class NodeDao {
 	
 	public ArrayList<Edge> getEdgesForC(){
 		ArrayList<Edge> result = new ArrayList<Edge>();
+		ArrayList<Integer> nodes = this.getAllC();
 		try {
-			conn = ConnUtils.getConnection();//
-			ArrayList<Integer> nodes = this.getAllC();
+			conn = ConnUtils.getConnection();
 			for (int i = 0; i < nodes.size(); i++) {
-				conn = ConnUtils.getConnection();
 				pstmt = conn.prepareStatement("SELECT * FROM NodeEdge WHERE nID1 = ?");
 				pstmt.setInt(1, nodes.get(i));
 				rs = pstmt.executeQuery();					
 					while (rs.next()){
-						Edge e = new Edge(rs.getInt("nID1"), rs.getInt("nID2"));
+						Edge e = new Edge(rs.getInt("eID"),rs.getInt("nID1"), rs.getInt("nID2"));
 						result.add(e);
 					}
 			}
@@ -269,16 +302,15 @@ public class NodeDao {
 	}
 	public ArrayList<Edge> getEdgesForN(){
 		ArrayList<Edge> result = new ArrayList<Edge>();
+		ArrayList<Integer> nodes = this.getAllN();
 		try {
-			conn = ConnUtils.getConnection();//
-			ArrayList<Integer> nodes = this.getAllN();
+			conn = ConnUtils.getConnection();
 			for (int i = 0; i < nodes.size(); i++) {
-				conn = ConnUtils.getConnection();
 				pstmt = conn.prepareStatement("SELECT * FROM NodeEdge WHERE nID1 = ?");
 				pstmt.setInt(1, nodes.get(i));
 				rs = pstmt.executeQuery();					
 					while (rs.next()){
-						Edge e = new Edge(rs.getInt("nID1"), rs.getInt("nID2"));
+						Edge e = new Edge(rs.getInt("eID"),rs.getInt("nID1"), rs.getInt("nID2"));
 						result.add(e);
 					}
 				}
@@ -295,7 +327,6 @@ public class NodeDao {
 		ArrayList<Node> result = new ArrayList<Node>();
 		try {
 			conn = ConnUtils.getConnection();//
-			//rs = pstmt.executeQuery();
 			pstmt = conn.prepareStatement("SELECT * FROM Node");
 			rs = pstmt.executeQuery();					
 			while (rs.next()){
@@ -357,6 +388,24 @@ public class NodeDao {
 		try {
 			conn = ConnUtils.getConnection();
 			String sql = "SELECT max(nID) from Node";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				result = rs.getInt(1);
+			}
+				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return result;
+	}	
+	public int getLastEdge() {
+		int result = 0;
+		try {
+			conn = ConnUtils.getConnection();
+			String sql = "SELECT max(eID) from NodeEdge";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();					
 			while (rs.next()){
@@ -439,7 +488,24 @@ public class NodeDao {
 			return result; //
 			// 
 	}
-	
+	public int searchEdge(int n1, int n2) {
+		try {
+			conn = ConnUtils.getConnection();
+			String sql = "SELECT * FROM NodeEdge WHERE nID1 = ? AND nID2 = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, n1);
+			pstmt.setInt(2, n2);
+			rs = pstmt.executeQuery();	
+			if (rs.next()){
+			    return rs.getInt("eID");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return -1;
+	}
 	public boolean addEdge(int n1, int n2) {
 		boolean result = false;
 		try {
@@ -656,7 +722,6 @@ public class NodeDao {
 	public boolean contains(int nid) {
 		try {
 			conn = ConnUtils.getConnection();//
-			//rs = pstmt.executeQuery();
 			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE nID = ? ");
 			pstmt.setInt(1, nid);
 			rs = pstmt.executeQuery();					

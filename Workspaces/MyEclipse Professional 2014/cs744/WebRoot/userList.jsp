@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<%@ include file="head.jsp"%>
+<%@ include file="realhead.jsp"%>
 <script type="text/javascript">
 	function del() {
 		if (confirm("Are you sure you want to delete that student?")) {

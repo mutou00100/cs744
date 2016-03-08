@@ -20,15 +20,21 @@ public class deleteNode extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ArrayList<Edge> res = new ArrayList<Edge>();
 		NodeDao nDao = new NodeDao();
 		int nid = Integer.parseInt(request.getParameter("nid"));
 		// the node to be deleted
+		response.setContentType("text/xml;charset=UTF-8");
+		StringBuffer sb = new StringBuffer(""); 
+		sb.append("<test>");
 		if (!nDao.contains(nid)) {
-			request.setAttribute("error", " the node doesn't exist ");
+			sb.append("<error>");
+			sb.append("the node doesn't exist");
+			sb.append("</error>");
 		} else if (nDao.whetherC(nid)) {
 			if (nDao.countG(nid) != 0) {
-				request.setAttribute("error", "connector node cannot be deleted if there is at least one other node in the pattern ");
+				sb.append("<error>");
+				sb.append("connector node cannot be deleted if there is at least one other node in the pattern");
+				sb.append("</error>");
 			} else {
 			ArrayList<Edge> neighbors = nDao.searchNeighbors(nid);	
 			ArrayList<Integer> patterns = new ArrayList<Integer>();
@@ -42,35 +48,32 @@ public class deleteNode extends HttpServlet {
 					patterns.add(node2);
 				}
 			}
-			nDao.deleteInNodeEdge(nid); // delete connections with other connectors
-			nDao.deletePattern(nid); // delete connections with other connectors
-			ArrayList<Integer> good = new ArrayList<Integer>();
-			ArrayList<Integer> bad = new ArrayList<Integer>();
+			int bad = 0;
 			// get all the patterns that would be effected
 			for (int i = 0; i < patterns.size(); i++) {
-				if (nDao.countN(patterns.get(i)) == 0) {
-					 bad.add(patterns.get(i));
-				} else {
-					good.add(patterns.get(i));
+				if (nDao.countN(patterns.get(i)) == 1) {
+					 bad++;
 				}
 			}
-			for (int i = 0; i < bad.size() - 1; i++) {
-				nDao.addEdge(bad.get(i), bad.get(i + 1));
+			if (bad==0) {
+				sb.append("<node>");
+				sb.append(""+nid);
+				sb.append("</node>");
+				nDao.deleteInNodeEdge(nid); // delete connections with other connectors
+				nDao.deletePattern(nid); // delete connections with other connectors	
 			}
-			if (bad.size() > 2) {
-				nDao.addEdge(bad.get(bad.size() - 1), bad.get(0));
-			}
-			if (good.size() != 0 && bad.size()!= 0) {
-				nDao.addEdge(good.get(0), bad.get(0));
-			}		
 		}} else {	
 		ArrayList<Edge> neighbors = nDao.searchNeighbors(nid);
 		if (neighbors.size() == 0) {
 			nDao.deleteInNode(nid);
+			sb.append("<node>");
+			sb.append(""+nid);
+			sb.append("</node>");
 		} else if(nDao.patternConnected(nid)&&nDao.countConnector(nDao.whichPattern(nid)) == 1) {
-			request.setAttribute("error", "It should still be a ring after delete operation");
-		} else {
-			
+			sb.append("<error>");
+			sb.append("It should still be a ring after delete operation");
+			sb.append("</error>");
+		} else {			
 			ArrayList<Integer> effected = new ArrayList<Integer>();
 			for (int i = 0; i < neighbors.size(); i++) {
 				int node1 = neighbors.get(i).getNode1();
@@ -82,20 +85,34 @@ public class deleteNode extends HttpServlet {
 					effected.add(node2);
 				}	
 			}
+			sb.append("<node>");
+			sb.append(""+nid);
+			sb.append("</node>");
+			sb.append("<node>");
 			if (effected.size() == 2){
 				int n1 = effected.get(0);
 				int n2 = effected.get(1);
 				if (!nDao.containEdge(n1, n2)&&!nDao.containEdge(n2, n1)) {
 					nDao.addEdge(n1,n2);
+					int eid = nDao.getLastEdge();
+					sb.append("<addEdge0>");
+					sb.append(""+eid);
+					sb.append("</addEdge0>");
+					sb.append("<addEdge1>");
+					sb.append(""+n1);
+					sb.append("</addEdge1>");
+					sb.append("<addEdge2>");
+					sb.append(""+n2);
+					sb.append("</addEdge2>");
 			}}
+			sb.append("</node>");
 			nDao.deleteInNode(nid);
 			nDao.deleteInNodeEdge(nid);
 		}
 		}
-		res.addAll(nDao.getNEdges());
-		res.addAll(nDao.getCEdges());
-		request.setAttribute("newEdges", res);
-		request.getRequestDispatcher("deleteNode.jsp").forward(request, response);		
+		sb.append("</test>");
+		PrintWriter out = response.getWriter() ;
+		out.print(sb);
 	}
 
 }

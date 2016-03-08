@@ -1,6 +1,4 @@
-<%@ page language="java" import="java.util.*" import="com.entity.Edge" import="com.dao.NodeDao" import="com.entity.Node" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s"%>
-<%@ include file="draw.jsp"%>
+<%@ include file="realhead.jsp"%>
 <script type="text/javascript">
 function check() {
 	var len = document.querySelectorAll('input[type="checkbox"]:checked').length;
@@ -12,9 +10,7 @@ function check() {
 	return true;
 }
 </script>
-<div class="span10" id="datacontent">
-		<form id="form2" action="AddConnector" method="post"
-		method="post" onsubmit ="return check()">
+<div class="span14" id="datacontent">
 		<table class="table">
 						<thead>
 							<tr>
@@ -23,18 +19,16 @@ function check() {
 						</thead>
 						<tbody>
 							<tr>
-								<td class="span4"><% 
+								<td class="span10"><% 
     	if (res.size() != 0) {
     	 out.println("Please choose the neighbor patterns");}
     	for (int i = 0; i < res.size(); i++) {
-    		out.print("<input type=\"checkbox\" name= \"checkedC\" value="+res.get(i)+">" + res.get(i));
+    		out.print("<input type=\"checkbox\" id = \"checkedC\" name= \"checkedC\" value= "+res.get(i)+">" + res.get(i));
     	} %></td>
 						
-								<td class="span6">
-									<button class="btn btn-primary" type="submit">Generate Pattern</button>
+								<td class="span3">
+									<a href ="addConnector.jsp" target="mainframe" class="btn btn-primary"  onclick = "if (check()){window.parent.document.getElementById('frame3').contentWindow.addConnector();}" type="submit">Generate Pattern</a>
 								</td>
 							</tr>
 						</tbody>
-					</table>
-		</form>
-<%@ include file="footer.jsp"%>
+					</table></div>

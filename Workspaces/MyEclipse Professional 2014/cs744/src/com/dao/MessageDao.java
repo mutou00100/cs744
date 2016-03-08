@@ -49,18 +49,15 @@ public class MessageDao {
 	public List<Message> showMessage(int pageNo, int pageSize, Map<String, String> parameters) {
 		List<Message> result = new ArrayList<Message>();
 		int firstPos = (pageNo - 1) * pageSize;
-		StringBuffer sql = new StringBuffer("SELECT * FROM T_per_info ");
+		String value = "";
+		StringBuffer sql = new StringBuffer();
+		sql.append("SELECT * FROM Message WHERE destination = ?");
 		if (parameters != null){
 			Set keySet = parameters.keySet();
 			if (keySet != null && keySet.size() > 0){
 				for (Iterator it = keySet.iterator(); it.hasNext(); ){
 					String key = (String)it.next();
-					String value = "'%" + (String)parameters.get(key) + "%'";
-					if (sql.indexOf("WHERE") == -1){
-						sql.append(" WHERE ").append(key).append(" LIKE ").append(value);
-					} else {
-						sql.append(" OR ").append(key).append(" LIKE ").append(value);
-					}
+					value =(String)parameters.get(key);
 				}
 			}
 		}
@@ -69,11 +66,13 @@ public class MessageDao {
 		try {
 			conn = ConnUtils.getConnection();//
 			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, value);
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()){
-				Message message = new Message();
-				result.add(message);
+				String temp = rs.getString("id").substring(0, rs.getString("id").length() - 2);
+				Message user = new Message(temp,rs.getInt("origin"),rs.getInt("destination"),rs.getString("content"));
+				result.add(user);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -85,31 +84,27 @@ public class MessageDao {
 	}
 	public int GetMessageCount(Map parameters){
 		int result = 0;
-		StringBuffer sql = new StringBuffer().append("SELECT COUNT(*) FROM T_per_info");
+		String value = "";
 		if (parameters != null){
 			Set keySet = parameters.keySet();
 			if (keySet != null && keySet.size() > 0){
 				for (Iterator it = keySet.iterator(); it.hasNext(); ){
 					String key = (String)it.next();
-					String value = "'%" + (String)parameters.get(key) + "%'";
-					if (sql.indexOf("WHERE") == -1){
-						sql.append(" WHERE ").append(key).append(" LIKE ").append(value);
-					} else {
-						sql.append(" OR ").append(key).append(" LIKE ").append(value);
-					}
+					value =(String)parameters.get(key);
 				}
 			}
 		}
 		try{
-		conn = ConnUtils.getConnection();
-		stmt = conn.createStatement();
-		rs = stmt.executeQuery(sql.toString());
+		conn = ConnUtils.getConnection();//
+		pstmt = conn.prepareStatement("SELECT COUNT(*) FROM Message WHERE destination = ?");
+		pstmt.setString(1, value);
+		rs = pstmt.executeQuery();
 		if (rs.next()){
 			result = rs.getInt(1);
 		}
 		}catch (SQLException e){}
 		finally {
-			ConnUtils.releaseConn(rs, stmt, conn);
+			ConnUtils.releaseConn(rs, pstmt, conn);
 		}
 		return result;
 	}
@@ -118,7 +113,7 @@ public class MessageDao {
 		int totalRecord = GetMessageCount(parameters);
 		SeparatePage sp = new SeparatePage();
 		parameters.put("method", "show");
-		sp = sp.createSeparatePage("userServlet", pageNo, pageSize, totalRecord, userList, parameters);
+		sp = sp.createSeparatePage("showMessage", pageNo, pageSize, totalRecord, userList, parameters);
 		return sp;
 	}}
 	

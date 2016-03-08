@@ -103,7 +103,27 @@ if (request.getAttribute("error") == null) {
 		};
 		var options ={layout:{randomSeed:1}};
 		network = new vis.Network(container, data, options);
+		addx();
 	}
+	function addx(){
+	var count = 0;
+		<%
+  		if(pathEdge != null) { // 有信息返
+  			for (int i=0;i<pathEdge.size();i++){
+  			if (hs1.contains(pathEdge.get(i))){
+  			%>	
+  			count++;	
+			setTimeout(function() {edges.update({from :<%=pathEdge.get(i).getNode1()%>, 
+			to :<%=pathEdge.get(i).getNode2()%>,
+			arrows:'to',color:'#FFA807',
+			length : EDGE_LENGTH_MAIN,dashes:true});}, 1000+ 100*count);
+			<%} else { %>
+			count++;	
+			setTimeout(function() {edges.update({from :<%=pathEdge.get(i).getNode1()%>, 
+			to :<%=pathEdge.get(i).getNode2()%>,
+			arrows:'to',color:'#FFA807'});},1000 + 100*count);
+  		<%}}
+  		}%>}
 </script>
 <% 
 request.getParameter("path");

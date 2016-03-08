@@ -18,7 +18,7 @@ public class sendMessage extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+			this.doPost(request, response);
 	}
 	NodeDao nd = new NodeDao();
 	boolean flag = false;
@@ -32,28 +32,23 @@ public class sendMessage extends HttpServlet {
 		int dest = Integer.parseInt(request.getParameter("dest"));
 		String message = request.getParameter("message");
 		HashSet<Integer> hs = new HashSet<Integer>();
+		PrintWriter out = response.getWriter() ;
 		if (nd.getNodeById(ori).getStatus() == 0) {
 			path.add(ori);
 			hs.add(ori);
 			if (!helper(hs, ori, dest,new ArrayList<Integer>())){
-				request.setAttribute("error", " message can't reach the destination ");
+				out.print("false");
 			} else {
 				MessageDao md = new MessageDao();
 				md.addMessage(message, ori, dest);
+				request.setAttribute("pathNode", path);
+				for (int i = 0; i < path.size(); i++) {
+					System.out.print(path.get(i) + "");
+				}
+				out.print(path);
 			}
 		}
-		request.setAttribute("pathNode", path);
-		ArrayList<Edge> pathEdge = new ArrayList<Edge>();
-		for (int i = 0; i < path.size() - 1; i++) {
-			Edge e = new Edge(path.get(i), path.get(i + 1));
-			pathEdge.add(e);
-		}
-		request.setAttribute("pathEdge", pathEdge);
-		for (int i = 0; i < path.size(); i++) {
-			System.out.print(path.get(i) + "");
-		}
-		System.out.println("");
-		request.getRequestDispatcher("sendMessage.jsp").forward(request, response);	
+		//request.getRequestDispatcher("sendMessage.jsp").forward(request, response);	
 	}
 	boolean helper(HashSet<Integer> hs, int cur, int dest, ArrayList<Integer> fake) {
 		if (rememberToChange) {
@@ -73,7 +68,7 @@ public class sendMessage extends HttpServlet {
 		}
 		for (int i = 0; i < neighbors.size(); i++) {
 			int temp = neighbors.get(i);
-			if (!hs.contains(temp) && nd.getNodeById(temp).getStatus() == 0) {
+			if (!hs.contains(temp) && (nd.getNodeById(temp).getStatus() == 0)) {
 				hs.add(temp);
 				fake.add(temp);
 				if (!helper(hs, temp, dest, fake)){
