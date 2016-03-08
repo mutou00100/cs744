@@ -33,7 +33,9 @@ public class sendMessage extends HttpServlet {
 		String message = request.getParameter("message");
 		HashSet<Integer> hs = new HashSet<Integer>();
 		PrintWriter out = response.getWriter() ;
-		if (nd.getNodeById(ori).getStatus() == 0) {
+		if (nd.getNodeById(ori) == null) {
+			out.print("false");
+		} else if (nd.getNodeById(ori).getStatus() == 0) {
 			path.add(ori);
 			hs.add(ori);
 			if (!helper(hs, ori, dest,new ArrayList<Integer>())){
