@@ -24,28 +24,41 @@ var inactivelist = [3];
   			for (int i=0;i<allnodes.size();i++){%>
 	
 				<%if (allnodes.get(i).getType().equals("c")){%>
-				nodes.add({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape : 'circularImage'
+				nodes.add({id :<%=allnodes.get(i).getnID()%>, label : 'Pattern' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Network-Pipe-icon.png',shape : 'circularImage',
+				 color: {
+            	background: '#6AAFFF',
+            	border: '#6AAFFF'
+         		},
 				});
-				<%}else {%>
-				nodes.add({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage'});
-<%}%>
-	
-<%}
-  		}%>
+				
+				<%}
+				if (allnodes.get(i).getType().equals("n")){%>
+				nodes.add({id :<%=allnodes.get(i).getnID()%>,label : 'Node' +<%=allnodes.get(i).getnID()%>,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage', color: {
+            background: '#6AAFFF',
+            border: '#6AAFFF'
+          },});<%}%>
+          <%if (allnodes.get(i).getStatus()!=0){%>
+				nodes.update({id :<%=allnodes.get(i).getnID()%>,
+				 color: {
+            background: '#6AAFFF',
+            border: 'gray'
+          }});
+				<%}}}%>
+		
 	
 		<%
   		if(edge != null) { // 有信息返
   			for (int i=0;i<edgeCC.size();i++){
   			%>
 			edges.add({id: <%=edgeCC.get(i).geteID()%>, from :<%=edgeCC.get(i).getNode1()%>, to :<%=edgeCC.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
-			<%}}
+			<%}
 			for (int i=0;i<edgeCN.size();i++){
   			%>	
 			edges.add({from :<%=edgeCN.get(i).getNode1()%>, to :<%=edgeCN.get(i).getNode2()%>,smooth:false,length : EDGE_LENGTH_SUB});
 			<%}
 			for (int i=0;i<edgeNN.size();i++){	%>
 			edges.add({id: <%=edgeNN.get(i).geteID()%>, from :<%=edgeNN.get(i).getNode1()%>, to :<%=edgeNN.get(i).getNode2()%>,smooth: {type: 'dynamic'},length : EDGE_LENGTH_SUB});
-			<%}
+			<%}}
   		%>
 	// create a network
 		var container = document.getElementById('mynetwork');
@@ -58,10 +71,6 @@ var inactivelist = [3];
 		 nodes: {
 		 borderWidth:6,
 		  size:25,
-	      color: {
-            background: '#6AAFFF',
-            border: '#6AAFFF'
-          },
           shapeProperties: {
             useBorderWithImage:true
           }
@@ -152,7 +161,7 @@ var inactivelist = [3];
             useBorderWithImage:true
           }
 		});} else {
-			nodes.add({id :node, label : 'Pattern'+node,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage',
+			nodes.add({id :node, label : 'Node'+node,image : DIR + 'Hardware-My-Computer-3-icon.png',shape : 'circularImage',
 		 borderWidth:6,
 		  size:25,
 	      color: {
@@ -257,5 +266,23 @@ var inactivelist = [3];
   						for (var i = 0; i < xml.getElementsByTagName("edgeDelete").length; i++) {
   						edges.remove(xml.getElementsByTagName("edgeDelete")[i].childNodes[0].nodeValue);	
 					}
-  	}}}}	
+  	}}}}
+  	
+  	function activateNode(){
+  			var nid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('nid').value;
+			createXMLHttp() ;
+			xmlHttp.open("POST","activateNode?nid="+nid) ;
+			xmlHttp.onreadystatechange = activateNodeCallback;
+			xmlHttp.send() ;
+  	}
+  	function activateNodeCallback(){
+  	if(xmlHttp.readyState == 4){
+				if(xmlHttp.status == 200){
+					var text = xmlHttp.responseText;
+				if (text == "error") {
+						alert("you can't activate this node");
+					} else {
+						nodes.update({id: text,color: {border: '#6AAFFF'}});
+					}
+  	}}}	
 		</script>

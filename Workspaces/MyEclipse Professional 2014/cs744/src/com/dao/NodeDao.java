@@ -18,12 +18,12 @@ public class NodeDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	private int ri, row, rc;
-	public void updateNode(int nid,String str){
+	public void updateNode(int nid){
 		try {
 			conn = ConnUtils.getConnection();
-			String sql = "UPDATE Node set type = ? WHERE nID = ?";
+			String sql = "UPDATE Node set status = ? WHERE nID = ?";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, str);
+			pstmt.setInt(1, 0);
 			pstmt.setInt(2, nid);
 			row = pstmt.executeUpdate();
 		} catch (SQLException e) {

@@ -11,6 +11,7 @@
   					<li><s:a href="deleteNode.jsp" target="mainframe">Delete Node</s:a></li>
   					<li><s:a href="sendMessage.jsp" target="mainframe">Send Message</s:a></li>
   					<li><s:a href="showMessagehead.jsp" target="mainframe">Show Message</s:a></li>
+  					<li><s:a href="activateNode.jsp" target="mainframe">Activate Node</s:a></li>
   					<li><s:a href="footer.jsp" target="frame3">Show Network</s:a></li>
 				</ul>
 			</div>

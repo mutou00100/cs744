@@ -1,0 +1,14 @@
+#Tue Mar 08 04:31:29 CST 2016
+tomcat7Server.cs744.deploymentPath=/Users/Annabel/Documents/apache-tomcat-7.0.56/webapps/cs744
+tomcat7Server.cs744.shouldBackup=false
+tomcat7Server.cs744.isExploded=true
+tomcat7Server.cs744.shouldOverwrite=false
+tomcat7Server.cs744.IEARProjectName=
+tomcat7Server.cs744.contextRoot=/cs744
+tomcat7Server.cs744.isDeployed=true
+tomcat7Server.cs744.noFileCopy=false
+tomcat7Server.cs744.deployIsOverProject=false
+eclipse.preferences.version=1
+tomcat7Server.cs744.type=WebDeployment
+tomcat7Server.cs744.isUptoDate=true
+tomcat7Server.cs744.altContextRoot=

@@ -1,0 +1,9 @@
+<html>
+<frameset rows="10%,90%">
+  <frame src="testdraw.jsp">
+ <frameset cols="25%,75%">
+  <frame src="sendMessage3.jsp">
+  <frame src="frame_c.htm">
+</frameset>
+</frameset>
+</html>

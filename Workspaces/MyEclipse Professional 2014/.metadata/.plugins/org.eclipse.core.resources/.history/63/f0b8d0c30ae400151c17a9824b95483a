@@ -1,0 +1,10 @@
+<html>
+<frameset rows="15%,850%">
+  <frame src="testdraw.jsp" noresize="noresize">
+ <frameset cols="25%,75%">
+  <frame src="sendMessage3.jsp" noresize="noresize">
+  <frame src="frame_c.htm" noresize="noresize">
+  
+</frameset>
+</frameset>
+</html>

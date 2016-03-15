@@ -1,0 +1,12 @@
+<html>
+<frameset rows="12%,88%">
+  <frame src="testhead.jsp" noresize="noresize" >
+ <frameset cols="20%,80%">
+  <frame src="testleft.jsp" noresize="noresize">
+  <frameset rows="20%,80%">
+  	<frame src="upper.jsp" id = "frame2" noresize="noresize" name="mainframe">
+  	<frame src="footer.jsp" id = "frame3"  name="frame3" noresize="noresize">
+  </frameset>
+</frameset>
+</frameset>
+</html>

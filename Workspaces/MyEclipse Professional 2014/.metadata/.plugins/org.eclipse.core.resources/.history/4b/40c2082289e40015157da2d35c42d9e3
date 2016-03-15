@@ -1,0 +1,29 @@
+<%@ include file="head_without_jsp.jsp"%>
+<%
+String idKey = (String) request.getAttribute("destination");
+%>
+
+<div class="span10" id="datacontent">
+<table class="table">
+<form  id="form2" action="showMessage?method=show" target="mainframe" method="post">	
+						<thead>
+							<tr>
+								<th colspan="5">Search By Receiver Node:</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="span1">Node ID:</td>
+								<td class="span1"><input class="input-small" name="nid" id="nid"
+									size="10" type="text" value=""></input></td>
+								<td class="span6">
+									<button class="btn btn-primary" type="submit">Delete</button>
+								</td>
+							</tr>
+						</tbody>		
+						Search By Receiver Node: <input type="text" name="destination" value="<%=idKey%>" />
+						<input class="btn btn-primary" type="submit" class="check" value="Search" />
+					</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<%@ include file="head_without_jsp.jsp"%>
+<%
+String idKey = (String) request.getAttribute("destination");
+%>
+
+<div class="span10" id="datacontent">
+					<form  id="form2" action="showMessage?method=show" target="mainframe" method="post">			
+						Search By Receiver Node: <input type="text" name="destination" value="<%=idKey%>" />
+						<input class="btn btn-primary" type="submit" class="check" value="Search" />
+					</form></td>
+</div>
+</body>
+</html>

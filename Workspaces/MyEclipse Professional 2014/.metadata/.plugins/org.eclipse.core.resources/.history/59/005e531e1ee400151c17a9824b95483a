@@ -1,0 +1,12 @@
+<html>
+<iframes rows="12%,88%">
+  <frame src="testhead.jsp" noresize="noresize" >
+ <iframes cols="20%,80%">
+  <frame src="testleft.jsp" noresize="noresize">
+  <frameset rows="20%,80%">
+  	<frame src="upper.jsp" noresize="noresize" name="mainframe">
+  	<frame src="footer.jsp" noresize="noresize" id = "footerdraw"  name="footerdraw">
+  
+</iframes>
+</iframes>
+</html>

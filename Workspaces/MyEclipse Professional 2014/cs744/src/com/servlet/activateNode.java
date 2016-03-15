@@ -13,7 +13,6 @@ import com.dao.NodeDao;
 import com.entity.Node;
 
 public class activateNode extends HttpServlet {
-
 	/**
 	 * The doGet method of the servlet. <br>
 	 * 
@@ -51,15 +50,12 @@ public class activateNode extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		NodeDao nDao = new NodeDao();
-		int chance = Integer.parseInt(request.getParameter("nid"));
-		//Node n = nDao.getNode(chance);
-		//if (n.getType().equals("ic")) {
-		//	nDao.updateNode(n.getnID(), "c");
-		//} else if (n.getType().equals("i")) {
-		//	nDao.updateNode(n.getnID(), "n");
+		int nid = Integer.parseInt(request.getParameter("nid"));
+		PrintWriter out = response.getWriter() ;
+		if (!nDao.contains(nid)) {
+			out.print("error");
+		} else {
+			nDao.updateNode(nid);
+			out.print("" + nid);
 		}
-		//request.getRequestDispatcher("activateNode.jsp").forward(request,
-				//response);
-	}
-
-}
+	}}

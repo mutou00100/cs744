@@ -1,0 +1,9 @@
+INDEX VERSION 1.126
+/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1398745344.index
+/cs744/src
+/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2392199953.index
+/testSyn/src
+/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1150187623.index
+/testSyn/src
+/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/434540821.index
+/JAVAEE/src/main/java

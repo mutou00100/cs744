@@ -49,6 +49,8 @@ public class sendMessage extends HttpServlet {
 				}
 				out.print(path);
 			}
+		} else {
+			out.print("false");
 		}
 		//request.getRequestDispatcher("sendMessage.jsp").forward(request, response);	
 	}

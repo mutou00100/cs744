@@ -1,0 +1,46 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dao.MessageDao;
+
+public class showMessage extends HttpServlet {
+			@Override
+			protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+					throws ServletException, IOException {
+				// TODO Auto-generated method stub
+				MessageDao md = new MessageDao();
+						int pageNo = 1;
+						int pageSize = 8;
+						String key = req.getParameter("id");
+						if (key == null || key.equals("null")) key = "";
+						HashMap parameters = new HashMap();
+						parameters.put("id", key);
+						parameters.put("name", key);
+						req.setAttribute("id", key);
+						if (req.getParameter("pageNo") != null){
+							pageNo = Integer.parseInt(req.getParameter("pageNo"));
+						}
+						if (req.getParameter("pageSize") != null){
+							pageSize = Integer.parseInt(req.getParameter("pageSize"));
+						}
+						req.setAttribute("sp", md.showMessage(pageNo, pageSize, parameters));
+						req.getRequestDispatcher("showMessage.jsp").forward(req, resp);
+					}
+				 
+
+			@Override
+			protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+					throws ServletException, IOException {
+				doGet(req,resp);
+			}
+			
+			
+			}
