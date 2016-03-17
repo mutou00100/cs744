@@ -1,6 +1,7 @@
 <%@ include file="head_without_jsp.jsp"%>
 <link href="css/bootstrap-slider.min.css" rel="stylesheet">
 			<div class="span10" id="datacontent">
+				<form id="form2" action="inactivateNode" method="post">
 					<table class="table">
 						<thead>
 							<tr>
@@ -16,7 +17,11 @@
 							</tr>
 						</tbody>
 					</table>
+				</form>
+				<div id="mynetwork" ></div>
+			</div>
 		</div>
+	</div>
 				<script type="text/javascript">
 				$("#random").slider({
 					formatter: function(value) {
