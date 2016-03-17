@@ -13,6 +13,7 @@
 <link type="text/css" rel="stylesheet" href="css/table.css" />
 <script type="text/javascript" src="js/exampleUtil.js"></script>
 <script type="text/javascript" src="js/vis.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <link href="js/vis.css" rel="stylesheet" type="text/css" />
 <script src="js/googleAnalytics.js"></script>
 <%@ taglib uri="/struts-tags" prefix="s"%>

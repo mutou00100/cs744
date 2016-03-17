@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;testSyn/WebRoot/asynctest.jsp&apos; to &apos;polling.jsp&apos;" description="Rename resource &apos;asynctest.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebRoot/asynctest.jsp" name="polling.jsp" stamp="1458167172146" updateReferences="true"/>
+</session>

@@ -18,6 +18,36 @@ public class NodeDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	private int ri, row, rc;
+	public void updateNodeToInactive(int nid){
+		try {
+			conn = ConnUtils.getConnection();
+			String sql = "UPDATE Node set status = ? WHERE nID = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, -1);
+			pstmt.setInt(2, nid);
+			row = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+	}
+	public ArrayList<Integer> getAllActiveNodes() {
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		try {
+			conn = ConnUtils.getConnection();//
+			pstmt = conn.prepareStatement("SELECT * FROM Node WHERE status = 0");
+			rs = pstmt.executeQuery();					
+			while (rs.next()){
+				result.add(rs.getInt("nID"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnUtils.releaseConn(rs, pstmt, conn);
+		}
+		return result;
+	}
 	public void updateNode(int nid){
 		try {
 			conn = ConnUtils.getConnection();

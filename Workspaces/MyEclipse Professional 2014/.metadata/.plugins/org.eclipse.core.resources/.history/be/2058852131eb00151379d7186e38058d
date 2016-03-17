@@ -1,0 +1,21 @@
+package com.utils;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import com.dao.NodeDao;
+
+public class RandomGenerator extends TimerTask  {
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		NodeDao nd = new NodeDao();
+		ArrayList<Integer> activeNodes = nd.getAllActiveNodes();
+		int range = activeNodes.size();
+		Random generator = new Random();
+		int node = activeNodes.get(generator.nextInt(range));
+		nd.updateNodeToInactive(node);	
+		System.out.print(node);
+	}	
+}

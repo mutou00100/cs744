@@ -21,6 +21,7 @@ public class MessageDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	private int ri,row,rc;
+	
 	public boolean addMessage(String content, int origin, int destination) {
 		boolean result = false;
 		java.util.Date dt = new java.util.Date();

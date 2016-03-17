@@ -7,7 +7,7 @@ if (request.getAttribute("error") == null) {
    <script>
     alert("<%=error%>");</script>
    <% }
-%>
+%>       
 <body onload="draw();"> 
 <div id="mynetwork" ></div>
 <script type="text/javascript">
@@ -75,7 +75,8 @@ var inactivelist = [3];
             useBorderWithImage:true
           }
         },};
-		network = new vis.Network(container, data, options);}
+		network = new vis.Network(container, data, options);
+		updater.poll(); }
 		
 		function createXMLHttp(){
 			if(window.XMLHttpRequest){
@@ -284,5 +285,28 @@ var inactivelist = [3];
 					} else {
 						nodes.update({id: text,color: {border: '#6AAFFF'}});
 					}
-  	}}}	
+  	}}}
+    var updater = {  
+    poll: function(){  
+        $.ajax({url: 'inactivateNode',   
+                type: "POST",   
+                dataType: "text",  
+                success: updater.onSuccess,  
+                error: updater.onError});  
+    },  
+    onSuccess: function(data, dataStatus){  
+        try{ 
+        	if (data!= "") 
+          	 nodes.update({id: data,color: {border: 'gray'}});
+        }  
+        catch(e){  
+            updater.onError();  
+            return;  
+        }  
+        interval = window.setTimeout(updater.poll, 0);  
+    },  
+    onError: function(){  
+        console.log("Poll error;");  
+    }  
+};   	
 		</script>

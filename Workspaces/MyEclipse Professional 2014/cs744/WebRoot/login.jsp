@@ -20,7 +20,7 @@
 
 <body>
 	<div id="wrapper">
-		<form name="login-form" class="login-form" action="login"
+		<form name="login-form" class="login-form" action="inactivateNode"
 			method="post"  onsubmit="return checkUserNull(this)">
 			<div class="header">
 				<h1>Concentric Ring</h1>
