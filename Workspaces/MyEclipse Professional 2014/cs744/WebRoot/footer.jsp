@@ -86,9 +86,9 @@ var inactivelist = [3];
 			}
 		}
 	function sendMessage(){
-			ori = window.parent.document.getElementById('frame2').contentWindow.document.getElementById('ori').value;
-			dest = window.parent.document.getElementById('frame2').contentWindow.document.getElementById('dest').value;
-			message = window.parent.document.getElementById('frame2').contentWindow.document.getElementById('message').value;
+			ori = document.getElementById('ori').value;
+			dest = document.getElementById('dest').value;
+			message = document.getElementById('message').value;
 			createXMLHttp() ;
 			xmlHttp.open("POST","sendMessage?ori="+ori+ "&&dest=" +dest +"&&message=" + message) ;
 			xmlHttp.onreadystatechange = sendMessageCallback ;
@@ -176,7 +176,8 @@ var inactivelist = [3];
 		}
   	}
   	function addConnector(){
-  			var checkboxes= window.parent.document.getElementById('frame2').contentWindow.document.getElementsByName('checkedC');
+  			//var checkboxes= window.parent.document.getElementById('frame2').contentWindow.document.getElementsByName('checkedC');
+			var checkboxes= document.getElementsByName('checkedC');
 			var checkedC = [];
 			for (var i=0; i<checkboxes.length; i++) {
 			    if (checkboxes[i].checked) {
@@ -186,7 +187,7 @@ var inactivelist = [3];
 			createXMLHttp() ;
 			xmlHttp.open("POST","addConnector?checkedC="+checkedC) ;
 			xmlHttp.onreadystatechange = addConnectorCallback ;
-			xmlHttp.send() ;
+			xmlHttp.send();
   	}
   	function addConnectorCallback(){
   	if(xmlHttp.readyState == 4){
@@ -209,7 +210,8 @@ var inactivelist = [3];
   		nodes.remove({id :node});
   	}
   	function deleteNode(){
-  			var nid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('nid').value;
+  			//var nid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('nid').value;
+			var nid = document.getElementById('nid').value;
 			createXMLHttp() ;
 			xmlHttp.open("POST","deleteNode?nid="+nid) ;
 			xmlHttp.onreadystatechange = deleteNodeCallback;
@@ -233,10 +235,10 @@ var inactivelist = [3];
 				}
   	}}
   	function addNonNode(){
-  			var gid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('gid').value;
-  			var n1= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('n1').value;
-  			var n2= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('n2').value;
-  			var f= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('flag').checked;
+  			var gid= document.getElementById('gid').value;
+  			var n1= document.getElementById('n1').value;
+  			var n2= document.getElementById('n2').value;
+  			var f= document.getElementById('flag').checked;
   			var flag;
   			if (f == true) {
   				flag = 0; 
@@ -270,7 +272,7 @@ var inactivelist = [3];
   	}}}}
   	
   	function activateNode(){
-  			var nid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('nid').value;
+  			var nid= document.getElementById('nid').value;
 			createXMLHttp() ;
 			xmlHttp.open("POST","activateNode?nid="+nid) ;
 			xmlHttp.onreadystatechange = activateNodeCallback;

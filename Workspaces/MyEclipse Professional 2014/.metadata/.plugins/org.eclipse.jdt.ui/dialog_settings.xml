@@ -5,8 +5,8 @@
 	</section>
 	<section name="NewWebXmlLinkCreationWizardPage">
 		<item value="This is the display name of my J2EE component" key="display_name"/>
-		<item value="This is the description of my J2EE component" key="description"/>
 		<item value="/cs744/WebRoot/WEB-INF" key="filePath"/>
+		<item value="This is the description of my J2EE component" key="description"/>
 		<item value="true" key="do_mapping"/>
 	</section>
 	<section name="SelfEncapsulateFieldWizard">
@@ -34,8 +34,8 @@
 		<item value="true" key="expanded0"/>
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item value="false" key="Comments"/>
 		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="Comments"/>
 		<item value="false" key="InstanceOf"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="Blocks"/>
@@ -55,13 +55,13 @@
 	</section>
 	<section name="NewServletCreationWizardPage">
 		<item value="1] Default template for Servlet" key="template"/>
-		<item value="false" key="create_dodelete"/>
 		<item value="true" key="create_constructor"/>
-		<item value="false" key="create_servletinfo"/>
+		<item value="false" key="create_dodelete"/>
 		<item value="true" key="create_doget"/>
+		<item value="false" key="create_servletinfo"/>
 		<item value="true" key="create_doinitdestroy"/>
-		<item value="true" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
+		<item value="true" key="create_main"/>
 		<item value="false" key="create_dopost"/>
 		<item value="false" key="create_doput"/>
 	</section>
@@ -70,8 +70,8 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item value="*" key="patterns"/>
 		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
 		<item value="1" key="updateSimilarElementsMatchStrategy"/>
 		<item value="false" key="updateTextualMatches"/>
 		<item value="false" key="updateSimilarElements"/>
@@ -81,7 +81,7 @@
 		<item value="false" key="SortOrdering"/>
 	</section>
 	<section name="NewJspCreationWizardPage">
-		<item value="Default JSP template" key="templateen_US"/>
 		<item value="/cs744/WebRoot" key="filePath"/>
+		<item value="Default JSP template" key="templateen_US"/>
 	</section>
 </section>

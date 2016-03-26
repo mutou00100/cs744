@@ -31,9 +31,9 @@ public class inactivateNode extends HttpServlet {
 		this.doGet(request, response);
 		
 	}
-	public void init() throws ServletException {
-			ran = new RandomGenerator();
-			timer = new Timer();
-			timer.schedule(ran,0);
-	}
+//	public void init() throws ServletException {
+//			ran = new RandomGenerator();
+//			timer = new Timer();
+//			timer.schedule(ran,0);
+//	}
 }

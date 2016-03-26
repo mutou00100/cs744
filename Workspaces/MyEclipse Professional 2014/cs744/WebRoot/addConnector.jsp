@@ -27,7 +27,7 @@ function check() {
     	} %></td>
 						
 								<td class="span3">
-									<a href ="addConnector.jsp" target="mainframe" class="btn btn-primary"  onclick = "if (check()){window.parent.document.getElementById('frame3').contentWindow.addConnector();}" type="submit">Generate Pattern</a>
+									<a class="btn btn-primary"  onclick = "if (check()){addConnector();}" type="submit">Generate Pattern</a>
 								</td>
 							</tr>
 						</tbody>

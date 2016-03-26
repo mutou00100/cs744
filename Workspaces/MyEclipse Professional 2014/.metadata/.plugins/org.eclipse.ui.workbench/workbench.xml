@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="75" version="2.0">
 <workbenchAdvisor/>
-<window height="873" width="1440" x="185" y="86">
+<window height="873" width="1440" x="204" y="23">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -304,7 +304,7 @@
 <input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Applications\/MyEclipse\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_10.0.0.me201110301321\/data\/libraryset\/EE_6\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="footer.jsp" partName="footer.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/footer.jsp" title="footer.jsp" tooltip="cs744/WebRoot/footer.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
+<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="footer.jsp" partName="footer.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/footer.jsp" title="footer.jsp" tooltip="cs744/WebRoot/footer.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/footer.jsp"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomGenerator.java" partName="RandomGenerator.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/utils/RandomGenerator.java" title="RandomGenerator.java" tooltip="cs744/src/com/utils/RandomGenerator.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
@@ -318,7 +318,7 @@
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="aaJAX.jsp" partName="aaJAX.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/aaJAX.jsp" title="aaJAX.jsp" tooltip="cs744/WebRoot/aaJAX.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/aaJAX.jsp"/>
 </editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="inactivateNode.jsp" partName="inactivateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/inactivateNode.jsp" title="inactivateNode.jsp" tooltip="cs744/WebRoot/inactivateNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="inactivateNode.jsp" partName="inactivateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/inactivateNode.jsp" title="inactivateNode.jsp" tooltip="cs744/WebRoot/inactivateNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/inactivateNode.jsp"/>
 </editor>
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="longPoll.jsp" partName="longPoll.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/longPoll.jsp" title="longPoll.jsp" tooltip="cs744/WebRoot/longPoll.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
@@ -420,7 +420,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.jsp" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -539,7 +539,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.18684395" ratioLeft="267" ratioRight="1162" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.14205739" ratioLeft="203" ratioRight="1226" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@78538773" ratio="0.8158996" ratioLeft="975" ratioRight="220" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -764,10 +764,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/progressbar.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/left.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/inactivateNode.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/footer.jsp"/>
 </editors>
-<item historyLabel="inactivateNode.java" index="0">
-<position info="not_deleted" x="670" y="0"/>
-</item>
 <item historyLabel="footer.jsp" index="2"/>
 <item historyLabel="Timer.class" index="3">
 <position info="not_deleted" x="22332" y="0"/>
@@ -854,7 +852,8 @@
 <item historyLabel="activateNode.jsp" index="5"/>
 <item historyLabel="progressbar.jsp" index="13"/>
 <item historyLabel="left.jsp" index="14"/>
-<item active="true" historyLabel="inactivateNode.jsp" index="15"/>
+<item historyLabel="inactivateNode.jsp" index="15"/>
+<item active="true" historyLabel="footer.jsp" index="16"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>

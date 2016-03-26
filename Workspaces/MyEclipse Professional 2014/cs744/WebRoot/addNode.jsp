@@ -67,7 +67,7 @@ if (allnodes.size() == 0){%>
 									size="10" type="text" value=""></input></td>
 								<td class="input"><input name="flag" id="flag" type="checkbox" value="0">Connect to Connector</input></td>
 								<td>
-									<a href ="addNode.jsp" target="mainframe" class="btn btn-primary" type="submit" onclick="if(check()){window.parent.document.getElementById('frame3').contentWindow.addNonNode();}">Add</button>
+									<a href ="addNode.jsp" target="mainframe" class="btn btn-primary" type="submit" onclick="if(check()){addNonNode();}">Add</button>
 								</td>
 							</tr>
 						</tbody>

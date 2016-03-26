@@ -28,7 +28,7 @@
 								<td class="span1"><input class="input-small" name="nid" id="nid"
 									size="10" type="text" value=""></input></td>
 								<td class="span6">
-									<button class="btn btn-primary" onclick = "if(check()){window.parent.document.getElementById('frame3').contentWindow.deleteNode();}" type="submit">Delete</button>
+									<button class="btn btn-primary" onclick = "if(check()){deleteNode();}" type="submit">Delete</button>
 								</td>
 							</tr>
 						</tbody>

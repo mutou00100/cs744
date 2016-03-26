@@ -42,7 +42,7 @@
 									size="10" type="text" value=""></input></td>
 								<td>
 									<button class="btn btn-primary" type="submit"
-									 onclick = "if(check()){window.parent.document.getElementById('frame3').contentWindow.sendMessage();}">Send</button>
+									 onclick = "if(check()){sendMessage();}">Send</button>
 								</td>
 							</tr>
 						</tbody>
