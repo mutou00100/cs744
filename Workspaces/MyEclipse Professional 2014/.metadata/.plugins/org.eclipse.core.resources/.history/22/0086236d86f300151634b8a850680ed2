@@ -3,7 +3,7 @@
 if (allnodes.size() == 0){%>
    <script>
     alert("Please add a pattern first");
-   </script>
+    window.location.href = "addConnector.jsp";</script>
    <% }
 %>
 <script type="text/javascript">
