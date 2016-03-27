@@ -52,7 +52,7 @@ margin-left:20%;
 <section>
  <div class="list-group">
 		<%if (request.getSession().getAttribute("firstname") == "admin"){%>
-		<% out.print("<li><a href=\"addUser.jsp\" target=\"frame3\">Add a User</a></li>");%>
+		<% out.print("<li><button=\"addUser.jsp\" target=\"frame3\">Add a User</a></li>");%>
 		<% out.print("<li><a href=\"listUser.action\" target=\"frame3\">Check Users</a></li>");}%>
    		<button id = "addNode" type="button" class="list-group-item" onClick="show(this.id)">Add Non-Connector Node</button>
 		<button id = "addPattern" type="button" class="list-group-item" onClick="show(this.id)">Add Pattern</button>		

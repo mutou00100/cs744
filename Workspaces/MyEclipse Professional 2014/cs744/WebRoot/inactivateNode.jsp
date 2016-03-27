@@ -11,7 +11,7 @@
 							<tr>
 								<td class="span3"><input id="random" name="random" type="text" data-slider-id='ex1Slider' data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0"/></td>
 								<td class="span2">
-									<button class="btn btn-primary" type="submit" id = "test1" onclick = "test();">Submit</button>
+									<button class="btn btn-primary" type="submit" id = "speed" onclick = "controlSpeed();">Submit</button>
 								</td>
 								<td class="span10">
 									When current percent is 1, it means every 2 seconds, a node becomes inactive. 
@@ -30,6 +30,7 @@
 				function test(){
 					var x = +document.getElementById("random").value;
 					alert(""+x);
+					
 				}
 				</script>
 </body>

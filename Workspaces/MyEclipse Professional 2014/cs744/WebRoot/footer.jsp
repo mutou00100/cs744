@@ -310,5 +310,30 @@ var inactivelist = [3];
     onError: function(){  
         console.log("Poll error;");  
     }  
-};   	
+};
+    function controlSpeed(){
+  			//var nid= window.parent.document.getElementById('frame2').contentWindow.document.getElementById('nid').value;
+			var speed = document.getElementById('random').value;
+			createXMLHttp() ;
+			xmlHttp.open("POST","inactivateNode?speed="+speed) ;
+			xmlHttp.onreadystatechange = deleteNodeCallback;
+			xmlHttp.send() ;
+  	}
+  	function deleteNodeCallback(){
+  	if(xmlHttp.readyState == 4){
+				if(xmlHttp.status == 200){
+					var xml = xmlHttp.responseXML;
+					//var parser = new DOMParser();
+					//var xml = parser.parseFromString(xmlHttp.responseText, "application/xml");
+					if (typeof xml.getElementsByTagName("error")[0]  != "undefined") {
+						alert(xml.getElementsByTagName("error")[0].childNodes[0].nodeValue);
+					} else {
+						removeNode(xml.getElementsByTagName("node")[0].childNodes[0].nodeValue);
+  						for (var i = 0; i < xml.getElementsByTagName("addEdge1").length; i++) {
+  						addEdge(xml.getElementsByTagName("addEdge0")[i].childNodes[0].nodeValue,xml.getElementsByTagName("addEdge1")[i].childNodes[0].nodeValue,
+  						xml.getElementsByTagName("addEdge2")[i].childNodes[0].nodeValue, "NN");
+  						}		
+					}
+				}
+  	}}   	
 		</script>

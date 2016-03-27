@@ -15,8 +15,23 @@ public class inactivateNode extends HttpServlet {
 	RandomGenerator ran;
 	Timer timer;
 	int last = -2;
+	long interval;
+	float speed = 0;
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+			if (request.getParameter("speed")!= null) {
+				speed = Float.parseFloat(request.getParameter("speed"));
+				if (Math.abs(speed - 0) < 0.000001) {
+					interval = 0;
+				} else {
+					interval = (long) ((long)2/speed) * 1000;
+				}
+				ran.setInterval(0);
+				boolean x = ran.cancel();
+				ran = new RandomGenerator(interval);
+				timer = new Timer();
+				timer.schedule(ran,0);
+			}
 			PrintWriter out = response.getWriter() ; 
 		    int node = ran.getRandom();		    		
 		    if (node != last && node != -2) {	    		    			
@@ -31,9 +46,9 @@ public class inactivateNode extends HttpServlet {
 		this.doGet(request, response);
 		
 	}
-//	public void init() throws ServletException {
-//			ran = new RandomGenerator();
-//			timer = new Timer();
-//			timer.schedule(ran,0);
-//	}
+	public void init() throws ServletException {
+			ran = new RandomGenerator(0);
+			timer = new Timer();
+			timer.schedule(ran,0);
+	}
 }

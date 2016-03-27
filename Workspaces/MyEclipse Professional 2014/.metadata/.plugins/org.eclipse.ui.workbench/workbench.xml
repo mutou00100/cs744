@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="75" version="2.0">
 <workbenchAdvisor/>
-<window height="873" width="1440" x="204" y="23">
+<window height="873" width="1440" x="228" y="23">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -24,14 +24,14 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.NoSourceFoundEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" itemType="typeToolBarContribution" x="32" y="22"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -43,8 +43,8 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1456692256245" focus="true" label="Workspace - MyEclipse Java Enterprise">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<info part="org.eclipse.ui.internal.EditorStack@5625e9c1">
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
@@ -73,264 +73,95 @@
 <part id="23"/>
 <part id="24"/>
 <part id="25"/>
-<part id="26"/>
-<part id="27"/>
-<part id="28"/>
-<part id="29"/>
-<part id="30"/>
-<part id="31"/>
-<part id="32"/>
-<part id="33"/>
-<part id="34"/>
-<part id="35"/>
-<part id="36"/>
-<part id="37"/>
-<part id="38"/>
-<part id="39"/>
-<part id="40"/>
-<part id="41"/>
-<part id="42"/>
-<part id="43"/>
-<part id="44"/>
-<part id="45"/>
-<part id="46"/>
-<part id="47"/>
-<part id="48"/>
-<part id="49"/>
-<part id="50"/>
-<part id="51"/>
-<part id="52"/>
-<part id="53"/>
-<part id="54"/>
-<part id="55"/>
-<part id="56"/>
-<part id="57"/>
-<part id="58"/>
-<part id="59"/>
-<part id="60"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="sendMessage.java" partName="sendMessage.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/sendMessage.java" title="sendMessage.java" tooltip="cs744/src/com/servlet/sendMessage.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/sendMessage.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1556" selectionTopPixel="645"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="left2.jsp" partName="left2.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/left2.jsp" title="left2.jsp" tooltip="cs744/WebRoot/left2.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/left2.jsp"/>
 </editor>
-<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web.xml" partName="web.xml" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="cs744/WebRoot/WEB-INF/web.xml" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/WEB-INF/web.xml"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="generateRandom.java" partName="generateRandom.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/generateRandom.java" title="generateRandom.java" tooltip="cs744/src/com/servlet/generateRandom.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/generateRandom.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="735" selectionTopPixel="120"/>
-</editor>
-<editor id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" name="web.xml" partName="web.xml" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/testSyn/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/testSyn/WebRoot/WEB-INF/web.xml" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/testSyn/WebRoot/WEB-INF/web.xml"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="asynctest.jsp" partName="asynctest.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/testSyn/WebRoot/asynctest.jsp" title="asynctest.jsp" tooltip="testSyn/WebRoot/asynctest.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testSyn/WebRoot/asynctest.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="addNode.java" partName="addNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/addNode.java" title="addNode.java" tooltip="cs744/src/com/servlet/addNode.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/addNode.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6835" selectionTopPixel="1938"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NodeDao.java" partName="NodeDao.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/dao/NodeDao.java" title="NodeDao.java" tooltip="cs744/src/com/dao/NodeDao.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/dao/NodeDao.java"/>
-<editorState selectionHorizontalPixel="35" selectionLength="0" selectionOffset="7936" selectionTopPixel="4443"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Node.java" partName="Node.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/entity/Node.java" title="Node.java" tooltip="cs744/src/com/entity/Node.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/entity/Node.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="366" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addNode.jsp" partName="addNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addNode.jsp" title="addNode.jsp" tooltip="cs744/WebRoot/addNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addNode.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Constructor.class" partName="Constructor.class" title="Constructor.class" tooltip="java.lang.reflect.Constructor" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang.reflect(Constructor.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="44" selectionOffset="21251" selectionTopPixel="7425"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Util.class" partName="Util.class" title="Util.class" tooltip="com.mysql.jdbc.Util" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Users\/Annabel\/Workspaces\/MyEclipse 10\/cs744\/Workspaces\/MyEclipse Professional 2014\/cs744\/WebRoot\/WEB-INF\/lib\/mysql-connector-java-5.1.18-bin.jar&lt;com.mysql.jdbc(Util.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageDao.java" partName="MessageDao.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/dao/MessageDao.java" title="MessageDao.java" tooltip="cs744/src/com/dao/MessageDao.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/dao/MessageDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="561" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessage.jsp" partName="showMessage.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/showMessage.jsp" title="showMessage.jsp" tooltip="cs744/WebRoot/showMessage.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/showMessage.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="head.jsp" partName="head.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/head.jsp" title="head.jsp" tooltip="cs744/WebRoot/head.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/head.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDAO.java" partName="UserDAO.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/dao/UserDAO.java" title="UserDAO.java" tooltip="cs744/src/com/dao/UserDAO.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/dao/UserDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="showMessage.java" partName="showMessage.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/showMessage.java" title="showMessage.java" tooltip="cs744/src/com/servlet/showMessage.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/showMessage.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1241" selectionTopPixel="98"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDAOImpl.java" partName="UserDAOImpl.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/dao/UserDAOImpl.java" title="UserDAOImpl.java" tooltip="cs744/src/com/dao/UserDAOImpl.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/dao/UserDAOImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="421" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Message.java" partName="Message.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/entity/Message.java" title="Message.java" tooltip="cs744/src/com/entity/Message.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/entity/Message.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="192" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SeparatePage.java" partName="SeparatePage.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/utils/SeparatePage.java" title="SeparatePage.java" tooltip="cs744/src/com/utils/SeparatePage.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/utils/SeparatePage.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="5076" selectionTopPixel="2850"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="addConnector.java" partName="addConnector.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/addConnector.java" title="addConnector.java" tooltip="cs744/src/com/servlet/addConnector.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/addConnector.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="117" selectionOffset="402" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddUserAction.java" partName="AddUserAction.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/AddUserAction.java" title="AddUserAction.java" tooltip="cs744/src/com/servlet/AddUserAction.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/AddUserAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="deleteNode.java" partName="deleteNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/deleteNode.java" title="deleteNode.java" tooltip="cs744/src/com/servlet/deleteNode.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/deleteNode.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="122" selectionOffset="883" selectionTopPixel="712"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="deleteNode.jsp" partName="deleteNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/deleteNode.jsp" title="deleteNode.jsp" tooltip="cs744/WebRoot/deleteNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/deleteNode.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addConnector.jsp" partName="addConnector.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addConnector.jsp" title="addConnector.jsp" tooltip="cs744/WebRoot/addConnector.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addConnector.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main.jsp" partName="main.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/main.jsp" title="main.jsp" tooltip="cs744/WebRoot/main.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/main.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="left.jsp" partName="left.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/left.jsp" title="left.jsp" tooltip="cs744/WebRoot/left.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/left.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="realhead.jsp" partName="realhead.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/realhead.jsp" title="realhead.jsp" tooltip="cs744/WebRoot/realhead.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/realhead.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addUser.jsp" partName="addUser.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addUser.jsp" title="addUser.jsp" tooltip="cs744/WebRoot/addUser.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addUser.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="ansQuestion.jsp" partName="ansQuestion.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/ansQuestion.jsp" title="ansQuestion.jsp" tooltip="cs744/WebRoot/ansQuestion.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/ansQuestion.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="setQuestion.jsp" partName="setQuestion.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/setQuestion.jsp" title="setQuestion.jsp" tooltip="cs744/WebRoot/setQuestion.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/setQuestion.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="head_without_jsp.jsp" partName="head_without_jsp.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/head_without_jsp.jsp" title="head_without_jsp.jsp" tooltip="cs744/WebRoot/head_without_jsp.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/head_without_jsp.jsp"/>
-</editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="theme.css" partName="theme.css" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/css/theme.css" title="theme.css" tooltip="cs744/WebRoot/css/theme.css" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/css/theme.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="223" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="table.css" partName="table.css" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/css/table.css" title="table.css" tooltip="cs744/WebRoot/css/table.css" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/css/table.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="167" selectionTopPixel="32"/>
-</editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="login.css" partName="login.css" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/css/login.css" title="login.css" tooltip="cs744/WebRoot/css/login.css" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/css/login.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4948"/>
-</editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="setQues.css" partName="setQues.css" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/css/setQues.css" title="setQues.css" tooltip="cs744/WebRoot/css/setQues.css" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/css/setQues.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="login.jsp" partName="login.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/login.jsp" title="login.jsp" tooltip="cs744/WebRoot/login.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/login.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="userList.jsp" partName="userList.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/userList.jsp" title="userList.jsp" tooltip="cs744/WebRoot/userList.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/userList.jsp"/>
-</editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="bootstrap-combined.min.css" partName="bootstrap-combined.min.css" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/css/bootstrap-combined.min.css" title="bootstrap-combined.min.css" tooltip="cs744/WebRoot/css/bootstrap-combined.min.css" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/css/bootstrap-combined.min.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3418" selectionTopPixel="435"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessagehead.jsp" partName="showMessagehead.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/showMessagehead.jsp" title="showMessagehead.jsp" tooltip="cs744/WebRoot/showMessagehead.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/showMessagehead.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConnUtils.java" partName="ConnUtils.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/utils/ConnUtils.java" title="ConnUtils.java" tooltip="cs744/src/com/utils/ConnUtils.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/utils/ConnUtils.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="304" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Integer.class" partName="Integer.class" title="Integer.class" tooltip="java.lang.Integer" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Integer.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23945" selectionTopPixel="9147"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="NumberFormatException.class" partName="NumberFormatException.class" title="NumberFormatException.class" tooltip="java.lang.NumberFormatException" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(NumberFormatException.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="76" selectionOffset="1283" selectionTopPixel="215"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="sendMessage.jsp" partName="sendMessage.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/sendMessage.jsp" title="sendMessage.jsp" tooltip="cs744/WebRoot/sendMessage.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/sendMessage.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HibernateSessionFactory.java" partName="HibernateSessionFactory.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/dao/HibernateSessionFactory.java" title="HibernateSessionFactory.java" tooltip="cs744/src/com/dao/HibernateSessionFactory.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/dao/HibernateSessionFactory.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Edge.java" partName="Edge.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/entity/Edge.java" title="Edge.java" tooltip="cs744/src/com/entity/Edge.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/entity/Edge.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="201" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Logout.java" partName="Logout.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/Logout.java" title="Logout.java" tooltip="cs744/src/com/servlet/Logout.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/Logout.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="showAllUserAction.java" partName="showAllUserAction.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/showAllUserAction.java" title="showAllUserAction.java" tooltip="cs744/src/com/servlet/showAllUserAction.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/showAllUserAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="783" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Login.java" partName="Login.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/Login.java" title="Login.java" tooltip="cs744/src/com/servlet/Login.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/Login.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1966" selectionTopPixel="420"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="activateNode.java" partName="activateNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/activateNode.java" title="activateNode.java" tooltip="cs744/src/com/servlet/activateNode.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/activateNode.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1540" selectionTopPixel="511"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AnsQuestion.java" partName="AnsQuestion.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/AnsQuestion.java" title="AnsQuestion.java" tooltip="cs744/src/com/servlet/AnsQuestion.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/AnsQuestion.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1891" selectionTopPixel="415"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SetQuestion.java" partName="SetQuestion.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/SetQuestion.java" title="SetQuestion.java" tooltip="cs744/src/com/servlet/SetQuestion.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/SetQuestion.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="activateNode.jsp" partName="activateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/activateNode.jsp" title="activateNode.jsp" tooltip="cs744/WebRoot/activateNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/activateNode.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="HttpServlet.class" partName="HttpServlet.class" title="HttpServlet.class" tooltip="javax.servlet.http.HttpServlet" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Applications\/MyEclipse\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_10.0.0.me201110301321\/data\/libraryset\/EE_6\/javax.servlet.jar&lt;javax.servlet.http(HttpServlet.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="footer.jsp" partName="footer.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/footer.jsp" title="footer.jsp" tooltip="cs744/WebRoot/footer.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/footer.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomGenerator.java" partName="RandomGenerator.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/utils/RandomGenerator.java" title="RandomGenerator.java" tooltip="cs744/src/com/utils/RandomGenerator.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/utils/RandomGenerator.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="692" selectionTopPixel="27"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="inactivateNode.java" partName="inactivateNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/inactivateNode.java" title="inactivateNode.java" tooltip="cs744/src/com/servlet/inactivateNode.java" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/inactivateNode.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="764" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="aaJAX.jsp" partName="aaJAX.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/aaJAX.jsp" title="aaJAX.jsp" tooltip="cs744/WebRoot/aaJAX.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/aaJAX.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="inactivateNode.jsp" partName="inactivateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/inactivateNode.jsp" title="inactivateNode.jsp" tooltip="cs744/WebRoot/inactivateNode.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="inactivateNode.jsp" partName="inactivateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/inactivateNode.jsp" title="inactivateNode.jsp" tooltip="cs744/WebRoot/inactivateNode.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/inactivateNode.jsp"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="longPoll.jsp" partName="longPoll.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/longPoll.jsp" title="longPoll.jsp" tooltip="cs744/WebRoot/longPoll.jsp" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/longPoll.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="head_without_jsp.jsp" partName="head_without_jsp.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/head_without_jsp.jsp" title="head_without_jsp.jsp" tooltip="cs744/WebRoot/head_without_jsp.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/head_without_jsp.jsp"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Timer.class" partName="Timer.class" title="Timer.class" tooltip="java.util.Timer" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addNode.jsp" partName="addNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addNode.jsp" title="addNode.jsp" tooltip="cs744/WebRoot/addNode.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addNode.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main2.jsp" partName="main2.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/main2.jsp" title="main2.jsp" tooltip="cs744/WebRoot/main2.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/main2.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main.jsp" partName="main.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/main.jsp" title="main.jsp" tooltip="cs744/WebRoot/main.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/main.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="head.jsp" partName="head.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/head.jsp" title="head.jsp" tooltip="cs744/WebRoot/head.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/head.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="left.jsp" partName="left.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/left.jsp" title="left.jsp" tooltip="cs744/WebRoot/left.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/left.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="footer.jsp" partName="footer.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/footer.jsp" title="footer.jsp" tooltip="cs744/WebRoot/footer.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/footer.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="realhead.jsp" partName="realhead.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/realhead.jsp" title="realhead.jsp" tooltip="cs744/WebRoot/realhead.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/realhead.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addConnector.jsp" partName="addConnector.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addConnector.jsp" title="addConnector.jsp" tooltip="cs744/WebRoot/addConnector.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addConnector.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="deleteNode.jsp" partName="deleteNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/deleteNode.jsp" title="deleteNode.jsp" tooltip="cs744/WebRoot/deleteNode.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/deleteNode.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="sendMessage.jsp" partName="sendMessage.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/sendMessage.jsp" title="sendMessage.jsp" tooltip="cs744/WebRoot/sendMessage.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/sendMessage.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessage.jsp" partName="showMessage.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/showMessage.jsp" title="showMessage.jsp" tooltip="cs744/WebRoot/showMessage.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/showMessage.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="activateNode.jsp" partName="activateNode.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/activateNode.jsp" title="activateNode.jsp" tooltip="cs744/WebRoot/activateNode.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/activateNode.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addUser.jsp" partName="addUser.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/addUser.jsp" title="addUser.jsp" tooltip="cs744/WebRoot/addUser.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/addUser.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="ansQuestion.jsp" partName="ansQuestion.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/ansQuestion.jsp" title="ansQuestion.jsp" tooltip="cs744/WebRoot/ansQuestion.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/ansQuestion.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessagehead.jsp" partName="showMessagehead.jsp" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/showMessagehead.jsp" title="showMessagehead.jsp" tooltip="cs744/WebRoot/showMessagehead.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/showMessagehead.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="sendMessage.java" partName="sendMessage.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/sendMessage.java" title="sendMessage.java" tooltip="cs744/src/com/servlet/sendMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/sendMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1299" selectionTopPixel="527"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="inactivateNode.java" partName="inactivateNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/inactivateNode.java" title="inactivateNode.java" tooltip="cs744/src/com/servlet/inactivateNode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/inactivateNode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1098" selectionTopPixel="119"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="activateNode.java" partName="activateNode.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/activateNode.java" title="activateNode.java" tooltip="cs744/src/com/servlet/activateNode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/activateNode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="619" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="addConnector.java" partName="addConnector.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/servlet/addConnector.java" title="addConnector.java" tooltip="cs744/src/com/servlet/addConnector.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/servlet/addConnector.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="33" selectionOffset="573" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomGenerator.java" partName="RandomGenerator.java" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/src/com/utils/RandomGenerator.java" title="RandomGenerator.java" tooltip="cs744/src/com/utils/RandomGenerator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/src/com/utils/RandomGenerator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="200" selectionTopPixel="45"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Float.class" partName="Float.class" title="Float.class" tooltip="java.lang.Float" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Float.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="68" selectionOffset="18002" selectionTopPixel="6150"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="FloatingDecimal.class" partName="FloatingDecimal.class" title="FloatingDecimal.class" tooltip="sun.misc.FloatingDecimal" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;sun.misc(FloatingDecimal.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Timer.class" partName="Timer.class" title="Timer.class" tooltip="java.util.Timer" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util(Timer.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23526" selectionTopPixel="1438"/>
-</editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="bootstrap.min.js" partName="bootstrap.min.js" path="/Users/Annabel/Workspaces/MyEclipse 10/cs744/Workspaces/MyEclipse Professional 2014/cs744/WebRoot/js/bootstrap.min.js" title="bootstrap.min.js" tooltip="cs744/WebRoot/js/bootstrap.min.js" workbook="org.eclipse.ui.internal.EditorStack@5625e9c1">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cs744/WebRoot/js/bootstrap.min.js"/>
-<editorState selectionHorizontalPixel="184762" selectionLength="0" selectionOffset="26898" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="22458" selectionTopPixel="7185"/>
 </editor>
 </editors>
 <views>
@@ -539,8 +370,8 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.14205739" ratioLeft="203" ratioRight="1226" relationship="2" relative="cvslocation"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@78538773" ratio="0.8158996" ratioLeft="975" ratioRight="220" relationship="2" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.17738517" ratioLeft="251" ratioRight="1164" relationship="2" relative="cvslocation"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@78538773" ratio="0.58212763" ratioLeft="684" ratioRight="491" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -558,7 +389,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.88990825" ratioLeft="679" ratioRight="84" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.83355176" ratioLeft="636" ratioRight="127" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -574,7 +405,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@55f431d9" ratio="0.7825444" ratioLeft="529" ratioRight="147" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@55f431d9" ratio="0.685624" ratioLeft="434" ratioRight="199" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -689,23 +520,32 @@
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1020" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1020" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.72214943" ratioLeft="551" ratioRight="212" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.72214943" ratioLeft="551" ratioRight="212" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="com.genuitec.javascript.debug.ui.scriptView" label="JavaScript Scripts Inspector"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -716,26 +556,33 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.58016527" ratioLeft="351" ratioRight="254" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.5971168" ratioLeft="787" ratioRight="531" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.5971168" ratioLeft="787" ratioRight="531" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <page content="org.eclipse.atf.mozilla.ide.ui.views.inspector" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="680" ratioRight="680" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="680" ratioRight="680" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.atf.mozilla.ide.debug.ui.scriptview" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -748,118 +595,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/inactivateNode.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/cs744/src/com/servlet/inactivateNode.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/cs744/src/com/utils/RandomGenerator.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/footer.jsp"/>
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util(Timer.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/aaJAX.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/activateNode.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/progressbar.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/cs744/WebRoot/js/bootstrap.min.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/head_without_jsp.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/realhead.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/longPoll.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/cs744/src/com/servlet/inactivateNode.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/aaJAX.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/progressbar.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/left.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/inactivateNode.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/cs744/WebRoot/footer.jsp"/>
 </editors>
-<item historyLabel="footer.jsp" index="2"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="886" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="612" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="240" y="8"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="240" y="8"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="inactivateNode.jsp" index="0"/>
 <item historyLabel="Timer.class" index="3">
-<position info="not_deleted" x="22332" y="0"/>
+<position info="not_deleted" x="21677" y="0"/>
 </item>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="449" y="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="922" y="0"/>
 </item>
-<item historyLabel="footer.jsp" index="2"/>
-<item historyLabel="inactivateNode.java" index="0">
-<position info="not_deleted" x="743" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="679" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="252" y="0"/>
 </item>
 <item historyLabel="Timer.class" index="3">
-<position info="not_deleted" x="22416" y="0"/>
+<position info="not_deleted" x="22458" y="0"/>
 </item>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="449" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="479" y="0"/>
 </item>
-<item historyLabel="footer.jsp" index="2"/>
-<item historyLabel="Timer.class" index="3">
-<position info="not_deleted" x="22332" y="0"/>
+<item historyLabel="inactivateNode.jsp" index="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="922" y="0"/>
 </item>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="677" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="698" y="0"/>
 </item>
-<item historyLabel="inactivateNode.java" index="0">
-<position info="not_deleted" x="743" y="0"/>
+<item historyLabel="inactivateNode.jsp" index="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="427" y="0"/>
 </item>
-<item historyLabel="inactivateNode.java" index="0">
-<position info="not_deleted" x="764" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="698" y="0"/>
 </item>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="677" y="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="627" y="0"/>
 </item>
-<item historyLabel="footer.jsp" index="2"/>
-<item historyLabel="Timer.class" index="3">
-<position info="not_deleted" x="22362" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="252" y="0"/>
 </item>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="677" y="0"/>
+<item historyLabel="inactivateNode.jsp" index="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="627" y="0"/>
 </item>
-<item historyLabel="footer.jsp" index="2"/>
-<item historyLabel="inactivateNode.java" index="0">
-<position info="not_deleted" x="764" y="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="767" y="0"/>
 </item>
-<item historyLabel="footer.jsp" index="2"/>
-<item historyLabel="Timer.class" index="3">
-<position info="not_deleted" x="23526" y="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="612" y="0"/>
 </item>
-<item historyLabel="aaJAX.jsp" index="4"/>
-<item historyLabel="activateNode.jsp" index="5"/>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="bootstrap.min.js" index="7">
-<position info="not_deleted" x="26898" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
 </item>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="head_without_jsp.jsp" index="8"/>
-<item historyLabel="bootstrap.min.js" index="7">
-<position info="not_deleted" x="26898" y="0"/>
+<item historyLabel="inactivateNode.jsp" index="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="1220" y="0"/>
 </item>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="realhead.jsp" index="9"/>
-<item historyLabel="head_without_jsp.jsp" index="8"/>
-<item historyLabel="realhead.jsp" index="9"/>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="654" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position/>
 </item>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="activateNode.jsp" index="5"/>
-<item historyLabel="RandomGenerator.java" index="1">
-<position info="not_deleted" x="692" y="0"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="907" y="0"/>
 </item>
-<item historyLabel="progressbar.jsp" index="6"/>
-<item historyLabel="realhead.jsp" index="9"/>
-<item historyLabel="activateNode.jsp" index="5"/>
-<item historyLabel="longPoll.jsp" index="10"/>
-<item historyLabel="inactivateNode.java" index="11">
-<position info="not_deleted" x="764" y="0"/>
+<item historyLabel="inactivateNode.java" index="1">
+<position/>
 </item>
-<item historyLabel="aaJAX.jsp" index="12"/>
-<item historyLabel="activateNode.jsp" index="5"/>
-<item historyLabel="aaJAX.jsp" index="12"/>
-<item historyLabel="progressbar.jsp" index="13"/>
-<item historyLabel="activateNode.jsp" index="5"/>
-<item historyLabel="progressbar.jsp" index="13"/>
-<item historyLabel="left.jsp" index="14"/>
-<item historyLabel="inactivateNode.jsp" index="15"/>
-<item active="true" historyLabel="footer.jsp" index="16"/>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="907" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="790" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="200" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="734" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="200" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="972" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="860" y="0"/>
+</item>
+<item historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="790" y="0"/>
+</item>
+<item historyLabel="RandomGenerator.java" index="2">
+<position info="not_deleted" x="200" y="0"/>
+</item>
+<item active="true" historyLabel="inactivateNode.java" index="1">
+<position info="not_deleted" x="790" y="0"/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topleft"/>
+<trimItem IMemento.internal.id="bottomleft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@78538773"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@33e1ccbc"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -867,30 +761,53 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@55f431d9"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="bootstrap.min.js" tooltip="cs744/WebRoot/js/bootstrap.min.js">
-<persistable path="/cs744/WebRoot/js/bootstrap.min.js"/>
-</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Timer.class" tooltip="java.util.Timer">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util(Timer.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StrutsPrepareAndExecuteFilter.class" tooltip="org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Users\/Annabel\/Workspaces\/MyEclipse 10\/cs744\/Workspaces\/MyEclipse Professional 2014\/cs744\/WebRoot\/WEB-INF\/lib\/struts2-core-2.2.1.jar&lt;org.apache.struts2.dispatcher.ng.filter(StrutsPrepareAndExecuteFilter.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FloatingDecimal.class" tooltip="sun.misc.FloatingDecimal">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;sun.misc(FloatingDecimal.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Float.class" tooltip="java.lang.Float">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Float.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ThreadPoolExecutor.class" tooltip="java.util.concurrent.ThreadPoolExecutor">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=cs744/\/Library\/Java\/JavaVirtualMachines\/jdk1.7.0_67.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util.concurrent(ThreadPoolExecutor.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomGenerator.java" tooltip="cs744/src/com/utils/RandomGenerator.java">
+<persistable path="/cs744/src/com/utils/RandomGenerator.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="longPoll.jsp" tooltip="cs744/WebRoot/longPoll.jsp">
-<persistable path="/cs744/WebRoot/longPoll.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="addConnector.java" tooltip="cs744/src/com/servlet/addConnector.java">
+<persistable path="/cs744/src/com/servlet/addConnector.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="progressbar.jsp" tooltip="cs744/WebRoot/progressbar.jsp">
-<persistable path="/cs744/WebRoot/progressbar.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="activateNode.java" tooltip="cs744/src/com/servlet/activateNode.java">
+<persistable path="/cs744/src/com/servlet/activateNode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="inactivateNode.java" tooltip="cs744/src/com/servlet/inactivateNode.java">
+<persistable path="/cs744/src/com/servlet/inactivateNode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="generateRandom.java" tooltip="cs744/src/com/servlet/generateRandom.java">
+<persistable path="/cs744/src/com/servlet/generateRandom.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="sendMessage.java" tooltip="cs744/src/com/servlet/sendMessage.java">
+<persistable path="/cs744/src/com/servlet/sendMessage.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessagehead.jsp" tooltip="cs744/WebRoot/showMessagehead.jsp">
+<persistable path="/cs744/WebRoot/showMessagehead.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="ansQuestion.jsp" tooltip="cs744/WebRoot/ansQuestion.jsp">
+<persistable path="/cs744/WebRoot/ansQuestion.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="addUser.jsp" tooltip="cs744/WebRoot/addUser.jsp">
+<persistable path="/cs744/WebRoot/addUser.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="activateNode.jsp" tooltip="cs744/WebRoot/activateNode.jsp">
+<persistable path="/cs744/WebRoot/activateNode.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="showMessage.jsp" tooltip="cs744/WebRoot/showMessage.jsp">
+<persistable path="/cs744/WebRoot/showMessage.jsp"/>
 </file>
 </mruList>
 </workbench>
