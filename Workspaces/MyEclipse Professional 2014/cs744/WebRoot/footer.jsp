@@ -11,11 +11,13 @@ if (request.getAttribute("error") == null) {
 <body onload="draw();"> 
 <div id="mynetwork" ></div>
 <script type="text/javascript">
-var inactivelist = [3];
+	var blockedlist = [];
+	var inactivelist = [];
    	var nodes, edges, network;
     var DIR = 'img/';
 	var EDGE_LENGTH_MAIN = 500;
-	var EDGE_LENGTH_SUB = 100;
+	var EDGE_LENGTH_SUB = 100; 
+	var process = 0;
 	function draw() {
 		nodes = new vis.DataSet();
 		edges = new vis.DataSet();
@@ -43,6 +45,7 @@ var inactivelist = [3];
             background: '#6AAFFF',
             border: 'gray'
           }});
+          	inactivelist.push(<%=allnodes.get(i).getnID()%>);
 				<%}}}%>
 		
 	
@@ -76,7 +79,8 @@ var inactivelist = [3];
           }
         },};
 		network = new vis.Network(container, data, options);
-		updater.poll(); }
+		//updater.poll(); 
+		}
 		
 		function createXMLHttp(){
 			if(window.XMLHttpRequest){
@@ -85,61 +89,116 @@ var inactivelist = [3];
 				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP") ;
 			}
 		}
-	function sendMessage(){
-			ori = document.getElementById('ori').value;
-			dest = document.getElementById('dest').value;
-			message = document.getElementById('message').value;
+	function sendMessage(cur, dest, message, ori){
 			createXMLHttp() ;
-			xmlHttp.open("POST","sendMessage?ori="+ori+ "&&dest=" +dest +"&&message=" + message) ;
-			xmlHttp.onreadystatechange = sendMessageCallback ;
-			xmlHttp.send() ;
-	}
-  	function sendMessageCallback(){
-  		if(xmlHttp.readyState == 4){
+			xmlHttp.open("POST","sendMessage?ori="+cur+ "&&dest=" +dest +"&&message=" + message) ;
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState == 4){
 				if(xmlHttp.status == 200){
+				    //path[ori,destination, message,... ]
 					var txt1 = xmlHttp.responseText ;
-					if (txt1 == "false") {
-						alert("This message failed to be sent");
-					} else {
 					var txt2 = txt1.substring(1,txt1.length-1);
 					var txt3 = txt2.split(",");
-					txt=[];
-					for(var j=0;j<txt3.length;j++){
-						txt.push(parseInt(txt3[j]));
+					var path=[];
+					var arrival = parseInt(txt3[txt3.length - 1]);
+					for(var j=0;j<txt3.length-1;j++){
+						path.push(parseInt(txt3[j]));
 					}
-						add(txt);
+						startWalking(dest, message, path, ori, arrival, 0);
 					}					
 				}
-			}
+			};
+			xmlHttp.send() ;
+	}
+	function startWalking(dest, message,path,ori,arrival, i){ 	
+		var count = 0;
+		process = 0;
+		for (; i < path.length; i++) {
+			setTime(dest, message,path,ori,arrival, i, count);
+			count++;
+		}
+					
   	}
-  	function add(txt)
-  					{
-  					console.log(txt);
-  					var count = 0;
-					for (var i = 0; i < txt.length; i++) {
-						get(i,count,txt);
-						get2(i,count+1,txt);
-						count++;}	
-  	}
-  	function get(i,count,txt) {
-			setTimeout(function() {
-					if (inactivelist.indexOf(txt[i])<0){
-						nodes.update({id: txt[i],color: {border: 'green'}});
-						pre = txt[i];	
+  	function setTime(dest, message,path,ori,arrival, i,count){
+  			setTimeout(function() {
+				if (process == 0) {
+					if (inactivelist.indexOf(path[i])>0) {								
+						blockedlist.push([path[i], dest, message, path[i], ori]);
+						process =-1;
+						alert("blocked at node" + path[i]);
+					} else {
+						if ((path[i] == dest) &&inactivelist.indexOf(path[i])<0) {
+							storeMessage(path[i], dest, message);
+							nodes.update({id: path[i],color: {border: 'green'}});
+							alert("sent successfully");
+							process =-1;
+						} else if (arrival == -1) {
+							// blocked, find other ways
+							process =-1;
+							//startWalking(cur, dest, message,path,ori,arrival, i){ 	
+							checkMessage(dest, message,path, ori,-1, i+1);
+						}
+					nodes.update({id: path[i],color: {border: 'green'}});
+						setTimeout(function() {
+						nodes.update({id: path[i],color: {border: '#6AAFFF'}});}
+					,1000);
 					}
-						else {
-						sendMessage(pre,dest,message);
 					}
-			},1000*count);
-  	}
-  	function get2(i,count,txt) {
-  		setTimeout(function() {
-  					if (i == txt.length - 1) {
-  						alert("The message has been sent successfully");
-  					} 
-					nodes.update({id: txt[i],color: {border: '#6AAFFF'}});}
-					,1000*(count));
-  	}
+				}
+			,1000*count);
+		}	
+/* 	// the path doesn't include the current node
+  	function startWalking(cur, dest, message,path,ori,arrival, i){ 	
+			var count = 0;
+			var process = 0;
+			while (i < path.length && process == 0){
+				setTimeout(function() {
+					if (process == 0) {
+						if (inactivelist.indexOf(path[i])>0) {								
+							blockedlist.append([cur, dest, message, path[i], ori]);
+							process =-1;
+							alert("blocked at node" + path[i]);
+						} else {
+							if ((path[i] == dest) &&inactivelist.indexOf(path[i])<0) {
+								storeMessage(ori, dest, message);
+								alert("sent successfully");
+								nodes.update({id: path[i],color: {border: 'green'}});
+								process =-1;
+							} else if (arrival == -1) {
+								// blocked, find other ways
+								process =-1;
+								checkMessage(path[i+1],cur, dest, message,ori, i+1);
+							}
+						nodes.update({id: path[i],color: {border: 'green'}});
+							setTimeout(function() {
+							nodes.update({id: path[i],color: {border: '#6AAFFF'}});}
+						,1000);
+						}
+						}
+					}
+				,1000*count);
+				count++;
+				i++;
+			}	
+  	} */
+  	//startWalking(cur, dest, message,path,ori,arrival, i){ 	
+  	function checkMessage(dest, message,path, ori, i){
+			createXMLHttp() ;
+			xmlHttp.open("POST","checkMessage?ori="+cur+ "&&dest=" +dest) ;
+			xmlHttp.onreadystatechange = function (){
+		  	if(xmlHttp.readyState == 4){
+					if(xmlHttp.status == 200){
+						var text = xmlHttp.responseText;
+						if (text == "false") {
+							startWalking(dest, message,path,ori,-1, i);
+						}else {
+						 	sendMessage(path[i],dest, message,ori);
+						}
+		  			}
+	  			}
+  			};
+		  	xmlHttp.send() ;
+	}    	
   	function addEdge(node0, node1, node2, type){
   		if (type == "CC"){
   			edges.add({id: node0, from :node1, to :node2,smooth: {type: 'dynamic'},length : EDGE_LENGTH_MAIN,dashes:true});
@@ -300,6 +359,7 @@ var inactivelist = [3];
         try{ 
         	if (data!= "") 
           	 nodes.update({id: data,color: {border: 'gray'}});
+          	 inactivelist.push(data);
         }  
         catch(e){  
             updater.onError();  
@@ -316,24 +376,11 @@ var inactivelist = [3];
 			var speed = document.getElementById('random').value;
 			createXMLHttp() ;
 			xmlHttp.open("POST","inactivateNode?speed="+speed) ;
-			xmlHttp.onreadystatechange = deleteNodeCallback;
 			xmlHttp.send() ;
   	}
-  	function deleteNodeCallback(){
-  	if(xmlHttp.readyState == 4){
-				if(xmlHttp.status == 200){
-					var xml = xmlHttp.responseXML;
-					//var parser = new DOMParser();
-					//var xml = parser.parseFromString(xmlHttp.responseText, "application/xml");
-					if (typeof xml.getElementsByTagName("error")[0]  != "undefined") {
-						alert(xml.getElementsByTagName("error")[0].childNodes[0].nodeValue);
-					} else {
-						removeNode(xml.getElementsByTagName("node")[0].childNodes[0].nodeValue);
-  						for (var i = 0; i < xml.getElementsByTagName("addEdge1").length; i++) {
-  						addEdge(xml.getElementsByTagName("addEdge0")[i].childNodes[0].nodeValue,xml.getElementsByTagName("addEdge1")[i].childNodes[0].nodeValue,
-  						xml.getElementsByTagName("addEdge2")[i].childNodes[0].nodeValue, "NN");
-  						}		
-					}
-				}
-  	}}   	
+  	function storeMessage(ori, dest, message){
+			createXMLHttp() ;
+			xmlHttp.open("POST","storeMessage?ori="+ori+ "&&dest=" +dest +"&&message=" + message) ;
+			xmlHttp.send() ;
+  	}  
 		</script>

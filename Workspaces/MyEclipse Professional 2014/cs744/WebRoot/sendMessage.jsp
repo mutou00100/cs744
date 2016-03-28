@@ -20,6 +20,12 @@
 			}
 		return true;
 	}
+	function sendMessageInMain() {
+		var ori= document.getElementById('ori').value;
+		var dest= document.getElementById('dest').value;
+		var message= document.getElementById('message').value;
+		sendMessage(ori, dest, message,ori);
+	}
 </script>
 <div class="span10" id="datacontent">
 					
@@ -42,7 +48,7 @@
 									size="10" type="text" value=""></input></td>
 								<td>
 									<button class="btn btn-primary" type="submit"
-									 onclick = "if(check()){sendMessage();}">Send</button>
+									 onclick = "if(check()){sendMessageInMain();}">Send</button>
 								</td>
 							</tr>
 						</tbody>

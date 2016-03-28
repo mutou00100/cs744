@@ -1,0 +1,51 @@
+package com.utils;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import com.dao.NodeDao;
+
+public class CheckMessage {
+	boolean rememberToChange = false;
+	NodeDao nd = new NodeDao();
+	int ori;
+	int dest;
+	public CheckMessage(int ori, int dest){
+		this.ori = ori;
+		this.dest = dest;
+		
+	}
+	public boolean check() {
+		return helper(new HashSet<Integer>(), ori, dest,new ArrayList<Integer>());
+		
+	}
+	boolean helper(HashSet<Integer> hs, int cur, int dest, ArrayList<Integer> fake) {
+		if (rememberToChange) {
+			return true;
+		}	
+		if (cur == dest) {
+			rememberToChange = true;
+			return true;
+		}
+		if (nd.getNodeById(cur).getStatus()== 0) {
+			ArrayList<Integer> neighbors = new ArrayList<Integer>();
+			neighbors.addAll(nd.searchNeighborNode(cur));
+			if (nd.whetherConnectedToPattern(cur)) {
+				neighbors.add(nd.whichPattern(cur));
+			} else if (nd.whetherC(cur)) {
+				neighbors.addAll(nd.getAllNforPattern(cur));
+			}
+			for (int i = 0; i < neighbors.size(); i++) {
+				int temp = neighbors.get(i);
+				if (!hs.contains(temp)&& nd.getNodeById(temp).getStatus() == 0) {
+					fake.add(cur);
+					hs.add(cur);	
+					if (!helper(hs, temp, dest, fake)){
+						fake.remove(fake.size() - 1);
+					}
+				}
+			}
+		}
+		return rememberToChange;
+		}
+}
