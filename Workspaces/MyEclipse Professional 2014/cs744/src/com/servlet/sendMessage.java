@@ -45,18 +45,21 @@ public class sendMessage extends HttpServlet {
 			if (!helper(hs, ori, dest,new ArrayList<Integer>())){
 				fakehelper(hsfake,ori, dest, new ArrayList<Integer>());
 				fakepath.add(-1);
+				fakepath.add(ori);
 				out.print(fakepath);
 			} else {
 				for (int i = 0; i < path.size(); i++) {
 					System.out.print(path.get(i) + "");
 				}
 				path.add(0);
+				path.add(ori);
 				out.print(path);
 			}
 		} else {
 			ArrayList<Integer> temp = new ArrayList<Integer>();
 			temp.add(ori);
 			temp.add(-1);
+			temp.add(ori);
 			out.print(temp);
 		}
 		//request.getRequestDispatcher("sendMessage.jsp").forward(request, response);	

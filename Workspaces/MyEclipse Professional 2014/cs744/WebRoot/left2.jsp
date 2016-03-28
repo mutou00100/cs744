@@ -61,7 +61,7 @@ margin-left:20%;
 		<button id = "activateNode" type="button" class="list-group-item" onClick="show(this.id)">Activate Node</button>
 		<button id = "inactivateNode" type="button" class="list-group-item" onClick="show(this.id)">Inactivate Node</button>
 		<button id = "Recieved Message" type="button" class="list-group-item" data-toggle="modal" data-target="#myModal" >Open Modal</button>
-		<button id = "blocked Message" type="button" class="list-group-item" data-toggle="modal" data-target="#myModal">Open Modal</button>
+		<button id = "blockedMessage" type="button" class="list-group-item" onclick="createTbody()" data-toggle="modal" data-target="#myModal">Open Modal</button>
 	</div>
 	<div id = "two"><%@ include file="footer.jsp"%></div></section>
 <script>
@@ -112,17 +112,28 @@ margin-left:20%;
                 <th>Content</th>
             </tr>
         </tfoot>
-        <tbody><script>
-L=[[35,50,60,'4/5','hello world'],[32,50,60,'3/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'7/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world'],[35,50,60,'4/5','hello world']]
-for(i=0;i<L.length;i++){
-    document.write('<tr><td>'+L[i][0]+'</td>')
-    document.write('<td>'+L[i][1]+'</td>')
-    document.write('<td>'+L[i][2]+'</td>')
-    document.write('<td>'+L[i][3]+'</td>')
-    document.write('<td>'+L[i][4]+'</td></tr>')
+        <tbody id="tbody">
+<script>
+table;
+function createTbody(){
+  L=blockedlist
+  s=""
+for(var i=0;i<L.length;i++){
+    s+='<tr><td>'+L[i][0]+'</td><td>'+L[i][1]+'</td><td>'+L[i][2]+'</td><td>'+L[i][3]+'</td><td>'+L[i][4]+'</td></tr>'
         }
+        document.getElementById('tbody').innerHTML=s;
+        if (table!=undefined){
+          table.destroy();
+        }
+        table = $('#example').DataTable( {
+        "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]],
+        "order": [[ 3, "desc" ]]
+    } );
+
+        $("#myModal").modal("show");
+      }
 </script>
-        </tbody>
+</tbody>
     </table>
              </div>
         <div class="modal-footer">

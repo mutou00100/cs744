@@ -16,12 +16,12 @@ import com.dao.NodeDao;
 public class checkMessage extends HttpServlet {
 	boolean rememberToChange = false;
 	NodeDao nd = new NodeDao();
-	boolean flag = false;
+	
 	int count = 0;
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		rememberToChange = false;
 		PrintWriter out = response.getWriter() ;
-		MessageDao md = new MessageDao();
 		int ori = Integer.parseInt(request.getParameter("ori"));
 		int dest = Integer.parseInt(request.getParameter("dest"));
 		boolean flag = helper(new HashSet<Integer>(), ori, dest,new ArrayList<Integer>());
